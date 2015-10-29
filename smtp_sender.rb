@@ -10,7 +10,7 @@ module LibrusEmailNotifications
                         @smtp_user = smtp_user
                         @smtp_password = smtp_password
 
-                        puts "[SmtpSender] Email:#{@smtp_email} user:#{@smtp_user} host:#{@smtp_address}"
+                        puts "[SmtpSender] Initialization. SMTP host: #{@smtp_address}, SMTP email:#{@smtp_email}, SMTP user:#{@smtp_user}"
                 end
 
                 def send_message(sender_display_name, recipients, subject, message)
