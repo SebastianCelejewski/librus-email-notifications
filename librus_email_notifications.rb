@@ -8,6 +8,7 @@ module LibrusEmailNotifications
 
     data_dir = "data"
     log_dir = "log"
+    df = "%Y-%m-%d %H:%M:%S"
 
     if ARGV.length != 6
             puts "Usage: ruby librus.rb <librus_user> <librus_password> <smtp_host> <smtp_email> <smtp_user> <smtp_password>"
@@ -87,6 +88,7 @@ module LibrusEmailNotifications
             text = full_page_html.xpath("//div[@class='container-message-content']").inner_html
 
             sender_name = sender.split(/\(/)[0]
+            sender_display_name = "#{sender_name} (#{librus_user})"
 
             smtp_start_time = DateTime.now
 
@@ -98,12 +100,7 @@ module LibrusEmailNotifications
 
             smtp_duration = ((smtp_end_time-smtp_start_time).to_f*86400).to_i
 
-            puts "smtp start time: #{smtp_start_time}"
-            puts "smtp end time: #{smtp_end_time}"
-            puts "smtp end time: #{smtp_end_time}"
-            puts "smtp duration: #{smtp_duration}"
-
-            File.open("log/smtp.log","a") {|f| f.puts "#{smtp_duration}" }
+            File.open("log/smtp.log","a") {|f| f.puts "#{smtp_start_time.strftime(df)};#{smtp_end_time.strftime(df)};#{smtp_duration}" }
 
             puts "Coming back to messages list"
 
