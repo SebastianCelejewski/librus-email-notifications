@@ -19,6 +19,21 @@ module LibrusEmailNotifications
         File.open("log/len.log","a") { |f| f.puts(log_entry) }
     end
 
+    if ARGV.length != 6
+        log "Usage: ruby librus.rb <librus_user> <librus_password> <smtp_host> <smtp_email> <smtp_user> <smtp_password>"
+        abort
+    end
+
+    librus_user = ARGV[0]
+    librus_password = ARGV[1]
+
+    smtp_host = ARGV[2]
+    smtp_email = ARGV[3]
+    smtp_user = ARGV[4]
+    smtp_password = ARGV[5]
+
+    log "Librus Email Notifications initialization for account #{librus_user}"
+
     if File.exists?("lockfile")
         log "Another instance is already running. Aborting."
         abort
@@ -30,18 +45,6 @@ module LibrusEmailNotifications
 
     File.open("lockfile","w") {}
 
-    if ARGV.length != 6
-            log "Usage: ruby librus.rb <librus_user> <librus_password> <smtp_host> <smtp_email> <smtp_user> <smtp_password>"
-            abort
-    end
-
-    librus_user = ARGV[0]
-    librus_password = ARGV[1]
-
-    smtp_host = ARGV[2]
-    smtp_email = ARGV[3]
-    smtp_user = ARGV[4]
-    smtp_password = ARGV[5]
 
     data_file = "#{data_dir}/#{librus_user}-data.txt"
 
@@ -125,5 +128,6 @@ module LibrusEmailNotifications
             link.click
     end
 
-    log "Done."
+    log "Librus Email Notifications processing complete for account #{librus_user}"
+
 end
