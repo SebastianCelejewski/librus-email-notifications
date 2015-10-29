@@ -14,7 +14,6 @@ module LibrusEmailNotifications
                 end
 
                 def send_message(sender_display_name, recipients, subject, message)
-                        puts "[SmtpSender] Sending email messages to #{recipients}"
                         smtp = Net::SMTP.new @smtp_address, 25
                         smtp.open_timeout = 500
                         smtp.read_timeout = 500
@@ -23,7 +22,6 @@ module LibrusEmailNotifications
                                         puts "[SmtpSender] Sending message to #{recipient} as #{sender_display_name}"
 
                                         from = "#{sender_display_name} <#{@smtp_email}>"
-                                        puts "From: #{from}"
 
                                         mime_message = "Content-type: text/html; charset=UTF-8\n"
                                         mime_message += "From: #{from}\n"
