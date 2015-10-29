@@ -14,7 +14,7 @@ module LibrusEmailNotifications
     Dir.mkdir(log_dir) unless File.exists?(log_dir)
 
     def LibrusEmailNotifications::log(message)
-        log_entry = "#{DateTime.now.strftime("%Y-%m-%d %H:%M:%S")} #{message}"
+        log_entry = "#{DateTime.now.strftime("%Y-%m-%d %H:%M:%S")} #{Process.pid} #{message}"
         puts log_entry
         File.open("log/len.log","a") { |f| f.puts(log_entry) }
     end
