@@ -17,7 +17,7 @@ module LibrusEmailNotifications
                         smtp = Net::SMTP.new @smtp_address, 25
                         smtp.open_timeout = 500
                         smtp.read_timeout = 500
-                        recipients.split(/;/).each do |recipient|
+                        recipients.split(/,/).each do |recipient|
                                     puts "[SmtpSender] Sending message to #{recipient} as #{sender_display_name}"
 
                                     from = "#{sender_display_name} <#{@smtp_email}>"

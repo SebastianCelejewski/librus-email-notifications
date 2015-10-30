@@ -19,8 +19,8 @@ module LibrusEmailNotifications
         File.open("log/len.log","a") { |f| f.puts(log_entry) }
     end
 
-    if ARGV.length != 6
-        log "Usage: ruby librus.rb <librus_user> <librus_password> <smtp_host> <smtp_email> <smtp_user> <smtp_password>"
+    if ARGV.length != 7
+        log "Usage: ruby librus.rb <librus_user> <librus_password> <smtp_host> <smtp_email> <smtp_user> <smtp_password> <recipient_email_addressess>"
         abort
     end
 
@@ -31,6 +31,8 @@ module LibrusEmailNotifications
     smtp_email = ARGV[3]
     smtp_user = ARGV[4]
     smtp_password = ARGV[5]
+
+    recipients = ARGV[6]
 
     log "Librus Email Notifications initialization for account #{librus_user}"
 
@@ -113,8 +115,7 @@ module LibrusEmailNotifications
         smtp_start_time = DateTime.now
 
         begin
-            smtp_sender.send_message(sender_display_name, "Sebastian.Celejewski@wp.pl;Ag.Celejewska@wp.pl", topic, text)
-            smtp_end_time = DateTime.now
+            smtp_sender.send_message(sender_display_name, recipients, topic, text)
             File.open(data_file,"a") {|f| f.puts id}
             smtp_status = :success
         rescue Exception => e
@@ -122,6 +123,7 @@ module LibrusEmailNotifications
             smtp_status = :failure
         end
 
+        smtp_end_time = DateTime.now
         smtp_duration = ((smtp_end_time-smtp_start_time).to_f*86400).to_i
 
         File.open("log/smtp.log","a") {|f| f.puts "#{smtp_start_time.strftime(df)};#{smtp_end_time.strftime(df)};#{smtp_duration};#{smtp_status}" }
