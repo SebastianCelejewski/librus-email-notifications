@@ -94,38 +94,45 @@ module LibrusEmailNotifications
 
     messages_that_need_to_be_processed.each do |id|
 
-            log "Processing message #{id}"
+        log "Processing message #{id}"
 
-            link_ending = "/wiadomosci/1/5/#{id}"
-            link = Capybara.page.find(:xpath, "//a[starts-with(@href, '#{link_ending}')]")
-            link.click
+        link_ending = "/wiadomosci/1/5/#{id}"
+        link = Capybara.page.find(:xpath, "//a[starts-with(@href, '#{link_ending}')]")
+        link.click
 
-            sender = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Nadawca']]/td[2]").text()
-            topic = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Temat']]/td[2]").text()
-            date = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Wysłano']]/td[2]").text()
+        sender = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Nadawca']]/td[2]").text()
+        topic = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Temat']]/td[2]").text()
+        date = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Wysłano']]/td[2]").text()
 
-            full_page_html = Nokogiri::HTML(Capybara.page.html)
-            text = full_page_html.xpath("//div[@class='container-message-content']").inner_html
+        full_page_html = Nokogiri::HTML(Capybara.page.html)
+        text = full_page_html.xpath("//div[@class='container-message-content']").inner_html
 
-            sender_name = sender.split(/\(/)[0]
-            sender_display_name = "#{sender_name} (#{librus_user})"
+        sender_name = sender.split(/\(/)[0]
+        sender_display_name = "#{sender_name} (#{librus_user})"
 
-            smtp_start_time = DateTime.now
+        smtp_start_time = DateTime.now
 
+        begin
             smtp_sender.send_message(sender_display_name, "Sebastian.Celejewski@wp.pl;Ag.Celejewska@wp.pl", topic, text)
-
             smtp_end_time = DateTime.now
-
             File.open(data_file,"a") {|f| f.puts id}
+            smtp_status = :success
+        rescue Exception => e
+            puts "[SmtpSender] Failed to send email-message: #{e}"
+            smtp_status = :failure
+        end
 
-            smtp_duration = ((smtp_end_time-smtp_start_time).to_f*86400).to_i
+        smtp_duration = ((smtp_end_time-smtp_start_time).to_f*86400).to_i
 
-            File.open("log/smtp.log","a") {|f| f.puts "#{smtp_start_time.strftime(df)};#{smtp_end_time.strftime(df)};#{smtp_duration}" }
+        File.open("log/smtp.log","a") {|f| f.puts "#{smtp_start_time.strftime(df)};#{smtp_end_time.strftime(df)};#{smtp_duration};#{smtp_status}" }
 
-            log "Coming back to messages list"
+        log "Waiting two minutes"
+        sleep 120
 
-            link = Capybara.page.find(:xpath, "//a[starts-with(@href, '/wiadomosci/5')]")
-            link.click
+        log "Coming back to messages list"
+
+        link = Capybara.page.find(:xpath, "//a[starts-with(@href, '/wiadomosci/5')]")
+        link.click
     end
 
     log "Librus Email Notifications processing complete for account #{librus_user}"
