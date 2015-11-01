@@ -62,6 +62,7 @@ module LibrusEmailNotifications
                 smtp_duration = ((smtp_end_time-smtp_start_time).to_f*86400).to_i
 
                 File.open("log/smtp.log","a") {|f| f.puts "#{smtp_start_time.strftime(@df)};#{smtp_end_time.strftime(@df)};#{smtp_duration};#{smtp_status}" }
+
             end
                 
             @logger.log "Grades processing complete"

@@ -68,9 +68,6 @@ module LibrusEmailNotifications
 
                 File.open("log/smtp.log","a") {|f| f.puts "#{smtp_start_time.strftime(@df)};#{smtp_end_time.strftime(@df)};#{smtp_duration};#{smtp_status}" }
 
-                @logger.log "Waiting two minutes"
-                sleep 120
-
                 @logger.log "Coming back to messages list"
 
                 link = Capybara.page.find(:xpath, "//a[starts-with(@href, '/wiadomosci/5')]")
