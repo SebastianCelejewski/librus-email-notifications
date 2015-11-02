@@ -31,6 +31,7 @@ module LibrusEmailNotifications
     messages_parser = MessagesParser.new data_dir, smtp_sender, logger
     grades_parser = GradesParser.new data_dir, smtp_sender, logger
     announcements_parser = AnnouncementsParser.new data_dir, smtp_sender, logger
+    calendar_parser = CalendarParser.new data_dir, smtp_sender, logger
 
     if File.exists?("lockfile")
         logger.log "Another instance is already running. Aborting."
@@ -66,6 +67,7 @@ module LibrusEmailNotifications
     messages_parser.process librus_user
     grades_parser.process librus_user
     announcements_parser.process librus_user
+    calendar_parser.process librus_user
 
     logger.log "Librus Email Notifications processing complete for account #{librus_user}"
 
