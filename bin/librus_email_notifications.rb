@@ -30,6 +30,7 @@ module LibrusEmailNotifications
     smtp_sender = SmtpSender.new(smtp_host, smtp_email, smtp_user, smtp_password, recipients)
     messages_parser = MessagesParser.new data_dir, smtp_sender, logger
     grades_parser = GradesParser.new data_dir, smtp_sender, logger
+    announcements_parser = AnnouncementsParser.new data_dir, smtp_sender, logger
 
     if File.exists?("lockfile")
         logger.log "Another instance is already running. Aborting."
@@ -58,12 +59,13 @@ module LibrusEmailNotifications
     Capybara.page.fill_in('passwd', :with => librus_password)
     Capybara.page.find(:xpath, "//input[@name='loguj']").click
 
-    logger.log "Waiting 10 seconds"
+    logger.log "Waiting five seconds"
 
-    sleep 10
+    sleep 5
 
     messages_parser.process librus_user
     grades_parser.process librus_user
+    announcements_parser.process librus_user
 
     logger.log "Librus Email Notifications processing complete for account #{librus_user}"
 
