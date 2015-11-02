@@ -30,7 +30,7 @@ module LibrusEmailNotifications
             @logger.log "Number of new grades: #{new_grades.length}"
 
             if new_grades.length > 0
-                sender_display_name = librus_user
+                sender_display_name = "Librus (#{librus_user})"
                 topic = "Nowe oceny: "
 
                 topic += new_grades.map{ |o| "#{o.value} (#{o.area})"}.join(", ")

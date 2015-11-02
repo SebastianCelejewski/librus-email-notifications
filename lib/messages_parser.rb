@@ -50,11 +50,12 @@ module LibrusEmailNotifications
 
                 sender_name = sender.split(/\(/)[0]
                 sender_display_name = "#{sender_name} (#{librus_user})"
+                topic_display_name = "Wiadomość: #{topic}"
 
                 smtp_start_time = DateTime.now
 
                 begin
-                    @smtp_sender.send_message(sender_display_name, topic, text)
+                    @smtp_sender.send_message(sender_display_name, topic_display_name, text)
                     File.open(data_file,"a") {|f| f.puts id}
                     smtp_status = :success
                 rescue Exception => e

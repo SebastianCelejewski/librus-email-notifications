@@ -61,8 +61,6 @@ module LibrusEmailNotifications
                 subject = row.at_xpath("thead/tr/td").text()
                 text = row.at_xpath("tbody/tr[3]/td").inner_html()
 
-                puts "#{sender}, #{date}, #{subject}, #{text[0..100]}"
-
                 announcements << Announcement.new(sender, date, subject, text)
             end            
             return announcements
