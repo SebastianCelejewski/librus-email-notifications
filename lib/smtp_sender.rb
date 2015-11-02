@@ -36,8 +36,8 @@ module LibrusEmailNotifications
 
                 puts "[SmtpSender] Message successfully sent to #{recipient}."
 
-                puts "Waiting two minutes"
-                sleep 120
+                puts "Waiting five seconds"
+                sleep 5
             end
         end
     end
