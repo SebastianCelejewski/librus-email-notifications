@@ -26,7 +26,7 @@ module LibrusEmailNotifications
             if new_announcements.length > 0
                 new_announcements.each do |announcement|
                     sender_display_name = "#{announcement.sender} (#{librus_user})"
-                    topic = "Ogłoszenie: " + announcement.subject
+                    topic = "Ogłoszenie: #{announcement.subject}"
                     text = announcement.text
 
                     smtp_start_time = DateTime.now

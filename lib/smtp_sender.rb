@@ -27,6 +27,8 @@ module LibrusEmailNotifications
                 mime_message += "From: #{from}\n"
                 mime_message += "To: #{recipient}\n"
                 mime_message += "Subject: #{subject}\n"
+                mime_message += "Date: #{DateTime.now.rfc2822}\n"
+                mime_message += "X-LEN: 1.0.0\n"
                 mime_message += "\n"
                 mime_message += message
 

@@ -55,19 +55,22 @@ module LibrusEmailNotifications
         def load_current_events(events_html_page)
             result = Array.new
 
-            month = events_html_page.xpath("//select[@name='miesiac']/option[@selected]/@value").text
+            month = "%02d" % events_html_page.xpath("//select[@name='miesiac']/option[@selected]/@value").text.to_i
+            month_name = events_html_page.xpath("//select[@name='miesiac']/option[@selected]").text
             year = events_html_page.xpath("//select[@name='rok']/option[@selected]/@value").text
 
             days = events_html_page.xpath("//div[@class='kalendarz-dzien']")
 
             days.each do |day|
-                day_number = day.at_xpath("//div[@class='kalendarz-dzien']").text()
+                day_number = day.at_xpath("div[@class='kalendarz-numer-dnia']").text().to_i
+                day_number_dd = "%02d" % day_number
                 events = day.xpath("table/tbody/tr/td")
                 events.each do |event|
                     info = event.inner_html
-                    title = info.gsub(/<br\/?>/," ")
+                    title = "#{year}-#{month}-#{day_number_dd}: #{info.gsub(/<br\/?>/,' ')}"
                     hover = event[:title]
-                    text = [info, hover].join("<br/>")
+                    date = "Data: #{day_number} #{month_name} #{year}"
+                    text = [date, info, hover].join("<br/>")
                     date = "#{year}-#{month}-#{day_number}"
 
                     result << Event.new(date, title, text)
