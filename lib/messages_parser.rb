@@ -17,7 +17,7 @@ module LibrusEmailNotifications
                 File.open(data_file,"w"){}
             end
 
-            Capybara.page.find(:xpath, "//a[@id='icon-wiadomosci']").click
+            Capybara.page.find(:xpath, "//a[@id='icon-wiadomosci']").trigger("click")
 
             @logger.log "Scanning links"
             links = Capybara.page.all(:xpath, "//a[starts-with(@href, '/wiadomosci/')]")
