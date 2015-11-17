@@ -12,7 +12,7 @@ module LibrusEmailNotifications
         def process(librus_user)
             @logger.log "Starting announcements processing"
 
-            Capybara.page.find(:xpath, "//a[@id='icon-ogloszenia']").click
+            Capybara.page.find(:xpath, "//a[@id='icon-ogloszenia']").trigger("click")
             announcements_html_page = Nokogiri::HTML(Capybara.page.html)
 
             current_announcements = load_current_announcements announcements_html_page
