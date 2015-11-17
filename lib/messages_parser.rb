@@ -39,7 +39,7 @@ module LibrusEmailNotifications
 
                 link_ending = "/wiadomosci/1/5/#{id}"
                 link = Capybara.page.find(:xpath, "//a[starts-with(@href, '#{link_ending}')]")
-                link.click
+                link.trigger("click")
 
                 sender = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Nadawca']]/td[2]").text()
                 topic = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Temat']]/td[2]").text()
