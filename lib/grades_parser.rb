@@ -18,7 +18,8 @@ module LibrusEmailNotifications
                 File.open(data_file,"w"){}
             end
 
-            Capybara.page.find(:xpath, "//a[@id='icon-oceny']").click
+            Capybara.page.find(:xpath, "//a[@id='icon-oceny']").trigger("click")
+            sleep 2
             grades_html_page = Nokogiri::HTML(Capybara.page.html)
 
             current_grades = load_current_grades grades_html_page

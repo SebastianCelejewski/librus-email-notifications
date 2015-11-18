@@ -21,6 +21,8 @@ module LibrusEmailNotifications
 
             sleep 2
 
+            current_url = Capybara.page.current_url
+
             @logger.log "Scanning links"
             links = Capybara.page.all(:xpath, "//a[starts-with(@href, '/wiadomosci/')]")
             hrefs = links.map{|x| x[:href]}.select{ |x| /.*\/wiadomosci\/\d+\/\d+\/(.*)/.match(x) != nil}
@@ -28,7 +30,7 @@ module LibrusEmailNotifications
             ids = hrefs.map{|href| /.*\/wiadomosci\/\d+\/\d+\/(.*)/.match(href)[1].to_i}.uniq.sort
 
             if ids.length == 0
-                @smtp_sender.send_message("Librus Email Notifications", "Chyba się zepsułem", "Lista wiadomości ucznia, jaką udało mi się wczytać, jest pusta. To jest nieprawdopodobne, więc chyba się zepsułem. Powiadom Sebastiana.")
+                @smtp_sender.send_message("Librus Email Notifications", "Chyba się zepsułem", "Jestem na podstronie #{current_url}. Lista wiadomości ucznia, jaką udało mi się wczytać, jest pusta. To jest nieprawdopodobne, więc chyba się zepsułem. Powiadom Sebastiana.")
             end
 
             @logger.log "Found #{ids.length} links"
@@ -67,7 +69,7 @@ module LibrusEmailNotifications
                     File.open(data_file,"a") {|f| f.puts id}
                     smtp_status = :success
                 rescue Exception => e
-                    puts "[SmtpSender] Failed to send email-message: #{e}"
+                    @logger.log "[SmtpSender] Failed to send email-message: #{e}"
                     @logger.log e.backtrace
                     smtp_status = :failure
                 end
@@ -80,7 +82,8 @@ module LibrusEmailNotifications
                 @logger.log "Coming back to messages list"
 
                 link = Capybara.page.find(:xpath, "//a[starts-with(@href, '/wiadomosci/5')]")
-                link.click
+                link.trigger("click")
+                pause 1
             end
 
             @logger.log "Messages processing complete"

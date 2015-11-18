@@ -12,7 +12,8 @@ module LibrusEmailNotifications
         def process(librus_user)
             @logger.log "Starting calendar processing"
 
-            Capybara.page.find(:xpath, "//a[@id='icon-terminarz']").click
+            Capybara.page.find(:xpath, "//a[@id='icon-terminarz']").trigger("click")
+            sleep 2
             events_html_page = Nokogiri::HTML(Capybara.page.html)
 
             current_events = load_current_events events_html_page
