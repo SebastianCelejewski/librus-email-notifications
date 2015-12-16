@@ -27,7 +27,13 @@ module LibrusEmailNotifications
             if new_events.length > 0
                 new_events.each do |event|
                     sender_display_name = "Librus (#{librus_user})"
-                    topic = "Ogłoszenie: " + event.title
+                    topic = "Wydarzenie w kalendarzu: " + event.title
+
+                    if event.type == :Absence
+                        @logger.log "Ignoring calendar event: #{topic}"
+                        next
+                    end
+
                     text = event.text
 
                     smtp_start_time = DateTime.now
@@ -67,14 +73,19 @@ module LibrusEmailNotifications
                 day_number_dd = "%02d" % day_number
                 events = day.xpath("table/tbody/tr/td")
                 events.each do |event|
-                    info = event.inner_html
-                    title = "#{year}-#{month}-#{day_number_dd}: #{info.gsub(/<br\/?>/,' ')}"
+                    info = event.inner_html.gsub(/<br\/?>/,' ')
+                    title = "#{year}-#{month}-#{day_number_dd}: #{info}"
+                    if info.start_with?("Nieobecność")
+                        type = :Absence
+                    else
+                        type = :Other
+                    end
                     hover = event[:title]
                     date = "Data: #{day_number} #{month_name} #{year}"
                     text = [date, info, hover].join("<br/>")
                     date = "#{year}-#{month}-#{day_number}"
 
-                    result << Event.new(date, title, text)
+                    result << Event.new(date, type, title, text)
                 end
             end
             return result

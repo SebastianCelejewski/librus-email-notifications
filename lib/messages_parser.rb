@@ -19,7 +19,7 @@ module LibrusEmailNotifications
 
             Capybara.page.find(:xpath, "//a[@id='icon-wiadomosci']").trigger("click")
 
-            sleep 2
+            sleep 3
 
             current_url = Capybara.page.current_url
 
@@ -28,10 +28,6 @@ module LibrusEmailNotifications
             hrefs = links.map{|x| x[:href]}.select{ |x| /.*\/wiadomosci\/\d+\/\d+\/(.*)/.match(x) != nil}
 
             ids = hrefs.map{|href| /.*\/wiadomosci\/\d+\/\d+\/(.*)/.match(href)[1].to_i}.uniq.sort
-
-            if ids.length == 0
-                @smtp_sender.send_message("Librus Email Notifications", "Chyba się zepsułem", "Jestem na podstronie #{current_url}. Lista wiadomości ucznia, jaką udało mi się wczytać, jest pusta. To jest nieprawdopodobne, więc chyba się zepsułem. Powiadom Sebastiana.")
-            end
 
             @logger.log "Found #{ids.length} links"
 
