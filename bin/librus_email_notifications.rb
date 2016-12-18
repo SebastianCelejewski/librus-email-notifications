@@ -60,9 +60,9 @@ module LibrusEmailNotifications
     Capybara.page.fill_in('passwd', :with => librus_password)
     Capybara.page.find(:xpath, "//input[@name='loguj']").click
 
-    logger.log "Waiting five seconds"
+    logger.log "Waiting 15 seconds"
 
-    sleep 5
+    sleep 15
 
     messages_parser.process librus_user
     grades_parser.process librus_user
