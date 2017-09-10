@@ -42,7 +42,7 @@ module LibrusEmailNotifications
 
     Capybara.page.fill_in('login', :with => librus_user)
     Capybara.page.fill_in('passwd', :with => librus_password)
-    Capybara.page.find(:xpath, "//input[@name='loguj']").click
+    Capybara.page.find(:xpath, "//input[@name='loguj_synergia']").click
 
 #    messages_parser.process librus_user
 #    grades_parser.process librus_user
