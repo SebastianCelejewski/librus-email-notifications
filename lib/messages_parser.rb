@@ -19,7 +19,8 @@ module LibrusEmailNotifications
 
             Capybara.page.find(:xpath, "//a[@id='icon-wiadomosci']").trigger("click")
 
-            sleep 3
+            @logger.log "Waiting 5 seconds"
+            sleep 5
 
             current_url = Capybara.page.current_url
 
@@ -45,7 +46,8 @@ module LibrusEmailNotifications
                 link = Capybara.page.find(:xpath, "//a[starts-with(@href, '#{link_ending}')]")
                 link.trigger("click")
 
-                sleep 1
+                @logger.log "Waiting 5 seconds"
+                sleep 5
 
                 sender = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Nadawca']]/td[2]").text()
                 topic = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Temat']]/td[2]").text()
@@ -79,7 +81,9 @@ module LibrusEmailNotifications
 
                 link = Capybara.page.find(:xpath, "//a[starts-with(@href, '/wiadomosci/5')]")
                 link.trigger("click")
-                pause 1
+
+                @logger.log "Waiting 5 seconds"
+                sleep 5
             end
 
             @logger.log "Messages processing complete"
