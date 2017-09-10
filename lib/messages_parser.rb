@@ -27,6 +27,9 @@ module LibrusEmailNotifications
 
             current_url = Capybara.page.current_url
             @logger.log "Current URL: #{current_url}"
+            if current_url != "https://synergia.librus.pl/wiadomosci"
+                @logger.log "Failed to browse to messages page. Try throttling"
+            end
 
             @logger.log "Scanning links"
             links = Capybara.page.all(:xpath, "//a[starts-with(@href, '/wiadomosci/')]")
