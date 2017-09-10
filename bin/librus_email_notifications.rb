@@ -28,10 +28,10 @@ module LibrusEmailNotifications
     logger.log "Librus Email Notifications initialization for account #{librus_user}"
 
     smtp_sender = SmtpSender.new(smtp_host, smtp_email, smtp_user, smtp_password, recipients)
-    messages_parser = MessagesParser.new data_dir, smtp_sender, logger
-    grades_parser = GradesParser.new data_dir, smtp_sender, logger
-    announcements_parser = AnnouncementsParser.new data_dir, smtp_sender, logger
-    calendar_parser = CalendarParser.new data_dir, smtp_sender, logger
+    messages_parser = MessagesParser.new data_dir, smtp_sender, logger, true
+    grades_parser = GradesParser.new data_dir, smtp_sender, logger, true
+    announcements_parser = AnnouncementsParser.new data_dir, smtp_sender, logger, true
+    calendar_parser = CalendarParser.new data_dir, smtp_sender, logger, true
 
     if File.exists?("lockfile")
         logger.log "Another instance is already running. Aborting."
@@ -58,11 +58,7 @@ module LibrusEmailNotifications
 
     Capybara.page.fill_in('login', :with => librus_user)
     Capybara.page.fill_in('passwd', :with => librus_password)
-    Capybara.page.find(:xpath, "//input[@name='loguj']").click
-
-    logger.log "Waiting 15 seconds"
-
-    sleep 15
+    Capybara.page.find(:xpath, "//input[@name='loguj_synergia']").click
 
     messages_parser.process librus_user
     grades_parser.process librus_user
