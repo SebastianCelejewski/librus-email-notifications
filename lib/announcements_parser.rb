@@ -68,7 +68,7 @@ module LibrusEmailNotifications
         end
 
         def load_previous_announcements(librus_user)
-            file_name = "#{data_dir}/#{librus_user}.announcements"
+            file_name = "#{@data_dir}/#{librus_user}.announcements"
             if File.exists?(file_name)
                 announcements = JSON.load(File.read(file_name)).map{|h| Announcement.from_hash h}
                 return announcements
@@ -79,7 +79,7 @@ module LibrusEmailNotifications
         end
 
         def save_new_announcements(librus_user, announcements)
-            file_name = "#{data_dir}/#{librus_user}.announcements"
+            file_name = "#{@data_dir}/#{librus_user}.announcements"
             File.open(file_name, "w") { |f| f.write(JSON.generate(announcements))}
         end
 

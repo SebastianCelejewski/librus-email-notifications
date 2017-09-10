@@ -25,7 +25,7 @@ module LibrusEmailNotifications
                 @logger.log "Waiting 2 seconds"
                 sleep 2
             end
-            
+
             grades_html_page = Nokogiri::HTML(Capybara.page.html)
 
             current_grades = load_current_grades grades_html_page
@@ -97,7 +97,7 @@ module LibrusEmailNotifications
         end
 
         def load_previous_grades(librus_user)
-            file_name = "#{data_dir}/#{librus_user}.grades"
+            file_name = "#{@data_dir}/#{librus_user}.grades"
             if File.exists?(file_name)
                 grades = JSON.load(File.read(file_name)).map{|h| Grade.from_hash h}
                 return grades
@@ -108,7 +108,7 @@ module LibrusEmailNotifications
         end
 
         def save_new_grades(librus_user, grades)
-            file_name = "#{data_dir}/#{librus_user}.grades"
+            file_name = "#{@data_dir}/#{librus_user}.grades"
             File.open(file_name, "w") { |f| f.write(JSON.generate(grades))}
         end
 
