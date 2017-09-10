@@ -44,10 +44,10 @@ module LibrusEmailNotifications
     Capybara.page.fill_in('passwd', :with => librus_password)
     Capybara.page.find(:xpath, "//input[@name='loguj_synergia']").click
 
-#    messages_parser.process librus_user
-#    grades_parser.process librus_user
-#    announcements_parser.process librus_user
-#    calendar_parser.process librus_user
+    messages_parser.process librus_user
+    grades_parser.process librus_user
+    announcements_parser.process librus_user
+    calendar_parser.process librus_user
 
     logger.log "Librus Email Notifications processing complete for account #{librus_user}"
 
