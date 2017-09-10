@@ -1,11 +1,12 @@
 module LibrusEmailNotifications
     class MessagesParser
         
-        def initialize data_dir, smtp_sender, logger
+        def initialize data_dir, smtp_sender, logger, throttle = false
             @data_dir = data_dir
             @smtp_sender = smtp_sender
             @logger = logger
             @df = "%Y-%m-%d %H:%M:%S"
+            @throttle = throttle
         end
 
         def process librus_user
@@ -19,8 +20,10 @@ module LibrusEmailNotifications
 
             Capybara.page.find(:xpath, "//a[@id='icon-wiadomosci']").trigger("click")
 
-            @logger.log "Waiting 5 seconds"
-            sleep 5
+            if @throttle
+                @logger.log "Waiting 5 seconds"
+                sleep 5
+            end
 
             current_url = Capybara.page.current_url
 
@@ -46,8 +49,10 @@ module LibrusEmailNotifications
                 link = Capybara.page.find(:xpath, "//a[starts-with(@href, '#{link_ending}')]")
                 link.trigger("click")
 
-                @logger.log "Waiting 5 seconds"
-                sleep 5
+                if @throttle
+                    @logger.log "Waiting 5 seconds"
+                    sleep 5
+                end
 
                 sender = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Nadawca']]/td[2]").text()
                 topic = Capybara.page.find(:xpath,"//tr[td[1]/b[text()='Temat']]/td[2]").text()
@@ -82,8 +87,10 @@ module LibrusEmailNotifications
                 link = Capybara.page.find(:xpath, "//a[starts-with(@href, '/wiadomosci/5')]")
                 link.trigger("click")
 
-                @logger.log "Waiting 5 seconds"
-                sleep 5
+                if @throttle
+                    @logger.log "Waiting 5 seconds"
+                    sleep 5
+                end
             end
 
             @logger.log "Messages processing complete"

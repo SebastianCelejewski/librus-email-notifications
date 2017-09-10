@@ -2,18 +2,22 @@ module LibrusEmailNotifications
 
     class CalendarParser
 
-        def initialize(data_dir, smtp_sender, logger)
+        def initialize(data_dir, smtp_sender, logger, throttle = false)
             @data_dir = data_dir
             @smtp_sender = smtp_sender
             @logger = logger
             @df = "%Y-%m-%d %H:%M:%S"
+            @throttle = throttle
         end
 
         def process(librus_user)
             @logger.log "Starting calendar processing"
 
             Capybara.page.find(:xpath, "//a[@id='icon-terminarz']").trigger("click")
-            sleep 2
+            if @throttle
+                @logger.log "Waiting 2 seconds"
+                sleep 2
+            end
             events_html_page = Nokogiri::HTML(Capybara.page.html)
 
             current_events = load_current_events events_html_page

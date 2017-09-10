@@ -2,11 +2,12 @@ module LibrusEmailNotifications
 
     class GradesParser
 
-        def initialize(data_dir, smtp_sender, logger)
+        def initialize(data_dir, smtp_sender, logger, throttle = false)
             @data_dir = data_dir
             @smtp_sender = smtp_sender
             @logger = logger
             @df = "%Y-%m-%d %H:%M:%S"
+            @throttle = throttle
         end
 
         def process(librus_user)
@@ -19,7 +20,12 @@ module LibrusEmailNotifications
             end
 
             Capybara.page.find(:xpath, "//a[@id='icon-oceny']").trigger("click")
-            sleep 2
+
+            if @throttle
+                @logger.log "Waiting 2 seconds"
+                sleep 2
+            end
+            
             grades_html_page = Nokogiri::HTML(Capybara.page.html)
 
             current_grades = load_current_grades grades_html_page
