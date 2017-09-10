@@ -35,6 +35,8 @@ module LibrusEmailNotifications
     logger.log "Browsing to the login page"
 
     Capybara.page.visit('http://synergia.librus.pl/loguj')
+    current_url = Capybara.page.current_url
+    logger.log "Current url is #{current_url}"
 
     logger.log "Logging into Librus"
 
