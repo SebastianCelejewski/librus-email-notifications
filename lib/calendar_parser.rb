@@ -96,7 +96,7 @@ module LibrusEmailNotifications
         end
 
         def load_previous_events(librus_user)
-            file_name = "data/#{librus_user}.events"
+            file_name = "#{data_dir}/#{librus_user}.events"
             if File.exists?(file_name)
                 events = JSON.load(File.read(file_name)).map{|h| Event.from_hash h}
                 return events
@@ -107,7 +107,7 @@ module LibrusEmailNotifications
         end
 
         def save_new_events(librus_user, events)
-            file_name = "data/#{librus_user}.events"
+            file_name = "#{data_dir}/#{librus_user}.events"
             File.open(file_name, "w") { |f| f.write(JSON.generate(events))}
         end
 
