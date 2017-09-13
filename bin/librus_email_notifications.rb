@@ -34,11 +34,17 @@ module LibrusEmailNotifications
     calendar_parser = CalendarParser.new data_dir, smtp_sender, logger, true
 
     if File.exists?("lockfile")
-        logger.log "Another instance is already running. Aborting."
-        abort
+        if Time.now - File.ctime("lockfile") > 15*60
+            logger.log "Lock file found but it is more than 15 minutes old. Deleting and continuing."
+            File.delete("lockfile")
+        else
+            logger.log "Another instance is already running. Aborting."
+            abort
+        end
     end
 
     at_exit do
+        logger.log "Releasing lock file"
         File.delete("lockfile")
     end
 
