@@ -45,11 +45,10 @@ module LibrusEmailNotifications
                 text = ""
                 new_grades.each do |grade|
                     text += "<b>Ocena</b>: #{grade.value}<br/>"
-                    text += "<b>Obszar oceniania</b>: #{grade.area}<br/>"
-                    text += "<b>Umiejętność</b>: #{grade.skill}<br/>"
+                    text += "<b>Kategoria</b>: #{grade.category}<br/>"
                     text += "<b>Data</b>: #{grade.date}<br/>"
                     text += "<b>Nauczyciel</b>: #{grade.teacher}<br/>"
-                    text += "<b>Treść oceny</b>: #{grade.comment}<br/>"
+                    text += "<b>Waga</b>: #{grade.weight}<br/>"
                     text += "<br/>"
                 end
 
@@ -82,13 +81,12 @@ module LibrusEmailNotifications
 
             rows.each do |row|
                 value = row.at_xpath('td[1]').text()
-                area = row.at_xpath('td[3]').text()
-                skill = row.at_xpath('td[4]').text()
-                date = row.at_xpath('td[5]').text()
-                teacher = row.at_xpath('td[6]').text()
-                comment = row.at_xpath('td[7]').text()
+                category = row.at_xpath('td[3]').text()
+                date = row.at_xpath('td[4]').text()
+                teacher = row.at_xpath('td[5]').text()
+                weight = row.at_xpath('td[7]').text()
 
-                grade = Grade.new value, area, skill, date, teacher, comment
+                grade = Grade.new value, category, date, teacher, weight
                 grades << grade
 
             end
