@@ -10,5 +10,9 @@ module LibrusEmailNotifications
 		def test_Should_ignore_hidden_rows_with_no_values
 			assert_equal 11, @grades.length
 		end
+
+		def test_Should_extract_subject
+			assert_equal "Język polski", @grades[2].subject
+		end
 	end
 end
