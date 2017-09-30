@@ -34,7 +34,7 @@ module LibrusEmailNotifications
                 sender_display_name = "Librus (#{librus_user})"
                 topic = "Nowe oceny: "
 
-                topic += new_grades.map{ |o| "#{o.subject} #{o.value} (#{o.category})"}.join(", ")
+                topic += new_grades.map{ |o| "#{o.subject}: #{o.value} (#{o.category})"}.join(", ")
 
                 text = ""
                 new_grades.each do |grade|
