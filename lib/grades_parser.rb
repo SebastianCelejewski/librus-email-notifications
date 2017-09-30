@@ -86,9 +86,10 @@ module LibrusEmailNotifications
                 teacher = row.at_xpath('td[5]').text()
                 weight = row.at_xpath('td[7]').text()
 
+                next if date == ""
+
                 grade = Grade.new value, category, date, teacher, weight
                 grades << grade
-
             end
 
             return grades
