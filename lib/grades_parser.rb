@@ -34,10 +34,11 @@ module LibrusEmailNotifications
                 sender_display_name = "Librus (#{librus_user})"
                 topic = "Nowe oceny: "
 
-                topic += new_grades.map{ |o| "#{o.value} (#{o.category})"}.join(", ")
+                topic += new_grades.map{ |o| "#{o.subject} #{o.value} (#{o.category})"}.join(", ")
 
                 text = ""
                 new_grades.each do |grade|
+                    text += "<b>Przedmiot</b>: #{grade.subject}<br/>"
                     text += "<b>Ocena</b>: #{grade.value}<br/>"
                     text += "<b>Kategoria</b>: #{grade.category}<br/>"
                     text += "<b>Data</b>: #{grade.date}<br/>"
@@ -74,6 +75,7 @@ module LibrusEmailNotifications
             grades = Array.new
 
             rows.each do |row|
+                subject = row.parent.parent.parent.parent.previous.at_xpath('td[2]/text()').to_s
                 value = row.at_xpath('td[1]').text()
                 category = row.at_xpath('td[3]').text()
                 date = row.at_xpath('td[4]').text()
@@ -82,7 +84,7 @@ module LibrusEmailNotifications
 
                 next if date == ""
 
-                grade = Grade.new value, category, date, teacher, weight
+                grade = Grade.new subject, value, category, date, teacher, weight
                 grades << grade
             end
 
