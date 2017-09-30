@@ -13,12 +13,6 @@ module LibrusEmailNotifications
         def process(librus_user)
             @logger.log "Starting grades processing"
 
-            data_file = "#{@data_dir}/#{librus_user}-data.txt"
-
-            if !File.exists?(data_file)
-                File.open(data_file,"w"){}
-            end
-
             Capybara.page.find(:xpath, "//a[@id='icon-oceny']").trigger("click")
 
             if @throttle
@@ -86,9 +80,10 @@ module LibrusEmailNotifications
                 teacher = row.at_xpath('td[5]').text()
                 weight = row.at_xpath('td[7]').text()
 
+                next if date == ""
+
                 grade = Grade.new value, category, date, teacher, weight
                 grades << grade
-
             end
 
             return grades

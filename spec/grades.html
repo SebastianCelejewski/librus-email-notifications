@@ -1,0 +1,989 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
+   <head><title>LIBRUS Synergia</title>
+   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Reply-to" content="administrator@dziennik.librus.pl">
+   <meta http-equiv="Content-Language" content="pl">
+   <meta name="Keywords" content="dziennik, elektroniczny, edukacja, oświata, programy, komputerowe, edziennik, e-dziennik, synergia">
+   <meta name="Description" content="Dziennik elektroniczny">
+        <link rel="shortcut icon" href="/images/synergia.ico">
+           <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-3618915-24', {'sampleRate': 2.5});
+        ga('set', 'dimension1', 'Rodzic');
+        
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->            <link rel="stylesheet" href="/js/jquery/jquery-ui-1.9.2.custom/css/librus/jquery-ui-1.9.2.custom.min.css" />
+        <link rel="stylesheet" href="/js/jquery/jquery-ui-1.9.2.custom/css/librus/librus-aditional.css" />
+                <script type="text/javascript" src="/js/jquery/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js" ></script>
+        <script type="text/javascript" src="/js/jquery/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+        <script type="text/javascript" src="/js/newLayout/jquery.mask.min.js"></script>
+        <script type="text/javascript" src="/js/LibrusJQueryTheme.js"></script>
+        <script type="text/javascript" src="/js/rowCollection.js"></script>
+        <script type="text/javascript" src="/js/quickSearchTool.js"></script>
+        <script type="text/javascript" src="/js/CsrfProtection.js"></script>
+        <script type="text/javascript">
+            var csrfTokenName = "requestkey";
+            var csrfTokenValue = "MC44Nzg0MjIwMCAxNTA2NzQ5ODM4XzRiMzFlZGUwYTIwZmQ0Y2FhMTdmMTA4MzcyNzFmMjg1";
+        </script>
+            <script type='text/javascript'>
+        var APP_SETTINGS = new Object();
+        Object.defineProperties(APP_SETTINGS, {
+            idw_content_domain: {
+                value: "https://synergia.indywidualni.pl",
+                enumerable: true
+            }
+        });
+    </script>
+    <script type="text/javascript" src="/js/fileValidator.1495831305.js"></script><script type="text/javascript" src="/js/CloudStorageBrowseTool.1502368841.js"></script><script type="text/javascript" src="/js/indywidualni.1495831305.js"></script><script type="text/javascript" src="/js/jquery/fancybox/jquery.fancybox-1.3.4.1332493810.js"></script><script type="text/javascript" src="/js/connectRMNToLesson.1495831305.js"></script>        <script type="text/javascript">
+            CSRF_PROTECTION.startAddingCsrfTokenTo($, csrfTokenName, csrfTokenValue);
+        </script>
+           <script src="/js/jquery/jquery.form.js"></script>
+   <script src="/js/jquery/jquery-ui-timepicker-addon.js"></script><script src="/js/datatables.js"></script>   <script src="/assets/js/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+   <link href="/assets/css/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css"/>
+   <script>// HOTFIX: We can't upgrade to jQuery UI 1.8.6 (yet)
+    // This hotfix makes older versions of jQuery UI drag-and-drop work in IE9
+    (function($){var a=$.ui.mouse.prototype._mouseMove;$.ui.mouse.prototype._mouseMove=function(b){if($.browser.msie&&document.documentMode>=9){b.button=1};a.apply(this,[b]);}}(jQuery));</script>
+      
+
+
+           <link rel="stylesheet" href="/LibrusStyleSheet2.1502368841.css" type="text/css" media="screen">        <link rel="stylesheet" href="/LibrusPrintStyleSheet2.1495831305.css" type="text/css" media="print">        <!--[if !IE]><!-->
+        <link rel="stylesheet" href="/LibrusStyleSheet2NonIE.1361960241.css" type="text/css" media="screen">        <!--<![endif]-->
+        <!--[if IE]>
+        <link rel="stylesheet" href="/LibrusStyleSheet2IE.1368167439.css" type="text/css" media="screen">        <![endif]-->
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="/LibrusStyleSheet2IE7.1371460280.css" type="text/css" media="screen">        <![endif]-->
+        <!--[if IE 8]>
+        <link rel="stylesheet" href="/LibrusStyleSheet2IE8.1367217179.css" type="text/css" media="screen">        <![endif]-->
+        <!--[if IE 9]>
+        <link rel="stylesheet" href="/LibrusStyleSheet2IE9.1366628972.css" type="text/css" media="screen">        <![endif]-->
+        <link rel="stylesheet" href="/LibrusStyleSheet2Light.1367500776.css" type="text/css" media="screen"><link rel="stylesheet" href="/assets/css/synergia.1495831304.css" type="text/css" media="screen"><link rel="stylesheet" href="/assets/css/style.1505942334.css" type="text/css" media="screen"><script type="text/javascript" src="/assets/js/synergia/main.1438948866.js"></script>        <script type="text/javascript">
+            var appName1 = 'LIBRUS Synergia';
+            var appName2 = 'LIBRUS Synergia';
+            var appName3 = 'LIBRUS Synergia';
+            var appName4 = 'LIBRUS Synergia';
+            var appName5 = 'LIBRUS Synergia';
+            var appName6 = 'LIBRUS Synergia';
+            var appName7 = 'LIBRUS Synergia';
+        </script>
+        <link rel="stylesheet" type="text/css" media="screen" href="/js/newLayout/SparkBoxSelect/sparkbox-select.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/jquery.treeview.css" />
+
+            <script type="text/javascript" src="/js/cookie.js" ></script>
+       <script type="text/javascript" src="/js/uklad_strony2.js" ></script>
+       <script type="text/javascript" src="/js/ZeroClipboard.min.js"></script>
+       <script type="text/javascript">
+           ZeroClipboard.setDefaults( { moviePath: '/swf/ZeroClipboard.swf' } );
+       </script>
+
+
+   <script type="text/javascript" src="/js/newLayout/SparkBoxSelect/jquery.sparkbox-select.js" ></script>
+        <link rel="stylesheet" href="/js/jquery/mTip.black.css" />
+        <script src="/js/newLayout/amCharts.js" type="text/javascript"></script>
+        <script src="/js/validators.js" type="text/javascript" ></script>
+        <script src="/js/ErrorProvider.js" type="text/javascript"></script>
+        <script src="/js/jquery/mTip-v1.0.3.js" type="text/javascript"></script>
+        <script src="/js/newLayout/rgbcolor.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/newLayout/newLayoutJS.1502368841.js"></script><script type="text/javascript" src="/js/newLayout/newLayoutJSExecutes.1502368841.js"></script>    <!--[if IE 7]>
+    <script type="text/javascript" src="/js/newLayout/newLayoutJSIE7.1368708313.js"></script>    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/newLayout/newLauoutJSltIE9.1375344710.js"></script>    <![endif]-->
+    <link rel="stylesheet" href="/js/jquery/jquery.multiselect.1389284078.css" type="text/css">    <script type="text/javascript" src="/js/jquery/jquery.multiselect.1422664051.js"></script>    <script type="text/javascript" src="/assets/js/synergia/MultiselectLibrus.1495831304.js"></script>    <script type="text/javascript" src="/js/pobierz_date_wywiadowki2.1495831305.js"></script>    <script type="text/javascript" src="/js/pobierz_email4.1495831305.js"></script>       <script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+   <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+   <!--[if lt IE 9]>
+   <script type="text/javascript">
+   $(document).ready(function(){
+        $(window).on("resize", function(){
+            simMediaQuery();
+        });
+
+        simMediaQuery();
+
+        function simMediaQuery(){
+            var widthTrigger = 1100;
+            var viewportW = parseInt($(window).width());
+            if (viewportW > widthTrigger){
+                if( $('#interfejs-lekcyjny').length <= 0 || parseInt( $('#body').css("padding-left") ) < 50 ) {
+                    $('#body').css({"padding-left" : "50px"});
+                }
+                $('#body').css({"padding-right" : "50px"});
+            } else {
+                if( $('#interfejs-lekcyjny').length <= 0 ) {
+                    $('#body').css({"padding-left" : "0"});
+                }
+                $('#body').css({"padding-right" : "0"});
+            }
+        }
+
+    });
+   </script>
+   <![endif]-->
+   <script type="text/javascript" src="/ajax.js"></script>
+   <script type="text/javascript">
+
+	<!--
+	var ajax = new sack();
+	var ajax1 = new sack();
+	var ajax2 = new sack();
+	var ajax3 = new sack();
+	var ajax4 = new sack();
+	var ajaxLesBar = new sack();
+	var ajaxKomMenu = new sack();
+	var edit_success = false; // wykorzystywane w onload przy hospitacjach
+	var isInterfaceMinimalize = 0;
+	var isInterfaceHide = 0;
+
+	/*
+       Function: getLessonsList
+
+       Function gets lessons list.
+
+       Author:
+            Dariusz Kozka <dariusz.kozka[at]librus.pl>
+
+       Parameters:
+
+            int 	sel - idetifier of class.
+            int 	pick - identifier of selected lesson.
+
+    */
+	function getLessonsList(sel, pick)
+	{
+		var klasa = sel;
+		if(klasa > 0)
+		{
+			if(pick)
+			{
+				var selected = '&selected=' + pick;
+			}
+			else
+			{
+				var selected = '';
+			}
+			document.getElementById('lekcja').options.length = 0;
+			if(klasa.length>0)
+			{
+				ajax2.requestFile = 'https://synergia.librus.pl/ajax/combos_lekcje.php?klasa=' + klasa + selected;
+				ajax2.onCompletion = createLessons;
+				ajax2.onLoading = showLessonWaitMessage;
+				ajax2.runAJAX();
+			}
+		}
+	}
+
+    /*
+       Function: createLessons
+
+       Function create lessons.
+
+       Author:
+            Dariusz Kozka <dariusz.kozka[at]librus.pl>
+
+    */
+	function createLessons()
+	{
+		document.getElementById('lekcja').options.length = 0;
+		var obj = document.getElementById('lekcja');
+		eval(ajax2.response);
+	}
+
+    /*
+       Function: showLessonWaitMessage
+
+       Function shows lesson wait message.
+
+       Author:
+            Dariusz Kozka <dariusz.kozka[at]librus.pl>
+
+    */
+	function showLessonWaitMessage()
+	{
+		document.getElementById('lekcja').options[document.getElementById('lekcja').options.length] = new Option('Trwa generowanie listy...', '');
+	}
+
+    /*
+       Function: hideSubmenuLayer
+
+       Function hide submenu layer.
+
+       Author:
+            Dariusz Kozka <dariusz.kozka[at]librus.pl>
+
+    */
+	function hideSubmenuLayer()
+	{
+		var tool = document.getElementById('tooltip');
+		if(tool)
+		{
+			document.body.removeChild(tool);
+		}
+		var ajax_loader = '<div style="text-align: center;">Ładowanie ustawień ...</div>';
+		ajax.requestFile = 'https://synergia.librus.pl/ajax/pozycje_obiektow.php?action=hide&objectType=interfejsSubmenu&isInterfaceMin='+isInterfaceMinimalize;
+		ajax.onCompletion = loadCoords;
+		ajax.onLoading = showWaitMessage;
+		ajax.runAJAX();
+		dd.elements.interfejsSubmenu.hide(true);
+		function showWaitMessage()
+		{
+			document.getElementById('interfejsSubmenu').innerHTML = ajax_loader;
+		}
+
+		function loadCoords()
+		{
+			document.getElementById('interfejsSubmenu').innerHTML = ajax.response;
+		}
+	}
+
+    /*
+       Function: minimalizeInterface
+
+       Function minimalize interface.
+
+       Author:
+            Dariusz Kozka <dariusz.kozka[at]librus.pl>
+
+    */
+	function minimalizeInterface()
+	{
+		var menu = document.getElementById('interfejsmenu');
+		var minImg = document.getElementById('minimalizeInterfaceIMG');
+		var maxImg = document.getElementById('maximalizeInterfaceIMG');
+		if(menu && maxImg && minImg){
+			menu.style.display = 'none';
+			minImg.style.display = 'none';
+			maxImg.style.display = '';
+			isInterfaceMinimalize = 1;
+			ajax4.requestFile = 'https://synergia.librus.pl/ajax/stan_minimalizacji_interfejsu.php?isInterfaceMin='+isInterfaceMinimalize;
+			ajax4.runAJAX();
+
+		}
+	}
+
+    /*
+       Function: maximalizeInterface
+
+       Function maximalize interface.
+
+       Author:
+            Dariusz Kozka <dariusz.kozka[at]librus.pl>
+
+    */
+	function maximalizeInterface()
+	{
+		var minImg = document.getElementById('minimalizeInterfaceIMG');
+		var maxImg = document.getElementById('maximalizeInterfaceIMG');
+		var menu = document.getElementById('interfejsmenu');
+		if(menu && maxImg && minImg){
+			menu.style.display = '';
+			minImg.style.display = '';
+			maxImg.style.display = 'none';
+			isInterfaceMinimalize = 0;
+			ajax4.requestFile = 'https://synergia.librus.pl/ajax/stan_minimalizacji_interfejsu.php?isInterfaceMin='+isInterfaceMinimalize;
+			ajax4.runAJAX();
+		}
+	}
+    
+    /*
+      Class: lessonBarStatus
+
+      Description:
+      LessonBar object with refresh functionality
+      
+      Author:
+      Krzysztof Żerucha <krzysztof.zerucha[at]librus.pl>
+    */
+    
+    var lessonBarStatus = function(lessonStart, lessonEnd, now, lessonNumber)
+    {
+        if (!Number.isInteger(lessonStart) || lessonStart < 0) {
+            throw new Error("Wrong type of input variable 'lessonStart'. Expected non-negative integer.");
+        }
+
+        if (!Number.isInteger(lessonEnd) || lessonEnd < 0) {
+            throw new Error("Wrong type of input variable 'lessonEnd'. Expected non-negative integer.");
+        }
+        
+        if (lessonStart >= lessonEnd) {
+            throw new Error("Wrong value of 'lessonStart' or 'lessonEnd'. 'lessonStar' is later than 'lessonEnd'.");
+        }
+
+        if (!Number.isInteger(now) || now < 0) {
+            throw new Error("Wrong type of input variable 'now'. Expected non-negative integer.");
+        }
+
+        if ((!Number.isInteger(lessonNumber) || lessonNumber < 0) && lessonNumber !== null) {
+            throw new Error("Wrong type of input variable 'lessonNumber'. Expected non-negative integer or null.");
+        }
+        
+        if (document.getElementById('progressBarLekcja') === null) {
+            throw new Error("progressBarLekcja not found");
+        }
+        
+        if (document.getElementById('progressBarText') === null) {
+            throw new Error("progressBarText not found");
+        }
+        
+        var lessonStart = lessonStart;
+        var lessonEnd = lessonEnd;
+        var actualTimeForLessonBar = now;
+        var lessonNumber = lessonNumber;
+        var divBar = document.getElementById('progressBarLekcja');
+        var divTxtNr = document.getElementById('progressBarText');
+        var lessonBarInterval;
+        this.refresh = function() {
+            var actualTime = actualTimeForLessonBar;
+            actualTimeForLessonBar += 60;
+            var percent = 0;
+            var remainingMinutes = 0;
+            if (lessonNumber !== null) {
+                percent = 100;
+                if (actualTime <= lessonEnd) {
+                    var percent = (actualTime - lessonStart) / (lessonEnd - lessonStart) * 100;
+                    var remainingMinutes = parseInt((lessonEnd - actualTime) / 60);
+                }
+                
+                divBar.style.width = percent + '%';
+                divTxtNr.innerHTML = 'Do końca lek. nr ' + lessonNumber + ': <span class="progressBarTextMinutes">' + remainingMinutes + ' min</span>';
+            } else {
+                divTxtNr.innerHTML = 'Do końca lekcji';
+                this.stopInterval();
+            }
+
+            if (percent >= 100) {
+                this.stopInterval();
+            }
+        }
+    };
+    
+    lessonBarStatus.prototype.startInterval = function() {
+        var self = this;
+        lessonBarInterval = window.setInterval(function() {self.refresh();}, 60000);
+        self.refresh();
+    };
+    
+    lessonBarStatus.prototype.stopInterval = function() {
+        clearInterval(lessonBarInterval);
+    };
+
+	function ustaw_komunikat_menu(stan)
+	{
+		ajaxKomMenu.requestFile = 'https://synergia.librus.pl/ajax/ustaw_komunikat_menu.php?stan='+stan;
+		ajaxKomMenu.execute = true;
+		ajaxKomMenu.runAJAX();
+
+	}
+
+    function ustaw_komunikat_archiwum(stan)
+	{
+		ajaxKomMenu.requestFile = 'https://synergia.librus.pl/ajax/ustaw_komunikat_archiwum.php?stan='+stan;
+		ajaxKomMenu.execute = true;
+		ajaxKomMenu.runAJAX();
+
+	}
+
+	function zmien_typ_menu(stan)
+	{
+            $.ajax({
+                dataType: "json",
+                type: "post",
+                url: '/ajax/zmien_typ_menu_adv.php',
+                data: 'stan='+stan,
+                success: function(data){
+                    if( data["SUCCESS"] ) {
+                        var html = $.parseHTML( data["CONTENT"], document, true );
+                        var scripts = [];
+                        var found = null;
+                        $.each( html, function( i, el ) {
+                            if(el.nodeName == 'SCRIPT') {
+                                scripts[i] = el;
+                            } else if(el.nodeName != '#text') {
+                                if($(el).attr("id") == "header") {
+                                    found = $(el);
+                                }
+                            }
+                        });
+                        if (found.length > 0) {
+                            $("#header").replaceWith(found);
+                            setTimeout(function(){
+                                $.each( scripts, function( i, el ) {
+                                    $("#header").append(el);
+                                });
+                            }, 500);
+                        }
+                    }
+                }
+            });
+	}
+
+    var interfejs_fold_object = function()
+    {
+        var res = new Object();
+        $('#interfejs-lekcyjny div[id^="g_"]').each(function() {
+            res[$(this).attr('id')] = !$(this).is(':visible');
+        });
+
+        return res;
+    };
+
+//------------
+
+//-->
+ </script>
+
+
+
+ <script type="text/javascript" src="/js/ImageSwaper.js"></script>
+
+
+<script type="text/javascript" charset="UTF-8">
+/* <![CDATA[ */
+try { if (undefined == xajax.config) xajax.config = {}; } catch (e) { xajax = {}; xajax.config = {}; };
+xajax.config.requestURI = "https://synergia.librus.pl/przegladaj_oceny/uczen?f=3";
+xajax.config.statusMessages = false;
+xajax.config.waitCursor = true;
+xajax.config.version = "xajax 0.5 rc2";
+xajax.config.legacy = false;
+xajax.config.defaultMode = "asynchronous";
+xajax.config.defaultMethod = "POST";
+/* ]]> */
+</script>
+<script type="text/javascript" src="/funkcje/xajax/xajax_js/xajax_core.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+/* <![CDATA[ */
+window.setTimeout(
+ function() {
+  var scriptExists = false;
+  try { if (xajax.isLoaded) scriptExists = true; }
+  catch (e) {}
+  if (!scriptExists) {
+   alert("Error: the xajax Javascript component could not be included. Perhaps the URL is incorrect?\nURL: /funkcje/xajax/xajax_js/xajax_core.js");
+  }
+ }, 2000);
+/* ]]> */
+</script>
+
+<script type='text/javascript' charset='UTF-8'>
+/* <![CDATA[ */
+xajax_ShowEdPlanInfo = function() { return xajax.request( { xjxfun: 'ShowEdPlanInfo' }, { parameters: arguments } ); };
+xajax_pobierzArtykulPomocy = function() { return xajax.request( { xjxfun: 'pobierzArtykulPomocy' }, { parameters: arguments } ); };
+xajax_pobierzDzialPomocy = function() { return xajax.request( { xjxfun: 'pobierzDzialPomocy' }, { parameters: arguments } ); };
+xajax_ustaw_komunikat_menu = function() { return xajax.request( { xjxfun: 'ustaw_komunikat_menu' }, { parameters: arguments } ); };
+xajax_ustaw_komunikat_archiwum = function() { return xajax.request( { xjxfun: 'ustaw_komunikat_archiwum' }, { parameters: arguments } ); };
+xajax_zmien_typ_menu = function() { return xajax.request( { xjxfun: 'zmien_typ_menu' }, { parameters: arguments } ); };
+/* ]]> */
+</script>
+        <script type="text/javascript">
+            if (xajax) {
+                xajax.config.postHeaders["requestkey"] = "MC44Nzg0MjIwMCAxNTA2NzQ5ODM4XzRiMzFlZGUwYTIwZmQ0Y2FhMTdmMTA4MzcyNzFmMjg1";
+            }
+        </script>
+        </head>
+<body onload="ImageSwaper.GetInstance().Load(); ">
+
+<script type="text/javascript">
+  var toload = 0;  
+  var imageShowed = false;
+    
+  /*
+       Function: startLoading
+
+       Function show preloader.
+
+       Author:
+            Sylwester Wydmuch <sylwester.wydmuch[at]librus.pl>
+
+    */
+  function startLoading()
+  {
+    toload = toload + 1; 
+    window.setTimeout('showLoadingImage()', 700);
+    
+  }
+    
+  /*
+       Function: showLoadingImage
+
+       Function show preloader image.
+
+       Author:
+            Sylwester Wydmuch <sylwester.wydmuch[at]librus.pl>
+
+    */
+  function showLoadingImage()
+  {
+   if(!imageShowed && toload>0) 
+   {
+    if (document.getElementById('loading')) {
+        document.getElementById('loading').style.display = 'block';
+        imageShowed=true;
+    }	
+   }
+  }
+    
+  /*
+       Function: stopLoading
+
+       Function hide preloader.
+
+       Author:
+            Sylwester Wydmuch <sylwester.wydmuch[at]librus.pl>
+
+    */
+  function stopLoading() 
+  {
+    toload = toload -1;
+    if(toload==0) 
+  	{
+  		document.getElementById('preloader-box').style.display='none';
+  		imageShowed = false;
+        $( 'input[type=submit],input[type=button], button' ).not('.ui-button').not('.advanced-button').css({'z-index': $(this).parent().zIndex() }).button();
+        
+
+        $( '.button-set .advanced-button' ).not('.ui-button').button({
+            text: true,
+            icons: {
+                secondary: 'ui-icon-triangle-1-s'
+            }
+        }).click(function() {
+            $('.button-set ul').not( $( this ).parent().next() ).hide();
+            var menu = $( this ).parent().next().stop().animate({
+                height: 'toggle'
+            }, 100);
+            $( document ).one( 'click', function() {
+                menu.hide();
+            });
+            return false;
+        }).parent().next().hide().css({'z-index': $(this).parent().zIndex()+1}).menu().buttonset();
+	}
+    
+  }
+  xajax.callback.global.onRequest = function() {startLoading();}
+  xajax.callback.global.onComplete = function() {stopLoading();}
+  </script><div id="preloader-box"  style="display: none;">
+            <div id="preloader-curtain"></div>
+            <div id="preloader">
+                <span id="preloader-logo"></span>
+                <span id="preloader-loader"></span>
+            </div>
+        </div>    <div class="yellowCard  maximalize " class="screen-only ui-widget-content draggable" 
+                id="yellowCard_1"
+        style=" left: 0px; top: 0px; display: none;"
+    >
+        <div class="titleYellowCard  maximalize " id="yellowCard_1_DraggHandle"  
+            onmouseup="interface_object_save_position('yellowCard_1', $(this.parentNode).offset().left, $(this.parentNode).offset().top, interfejs_fold_object());"
+        >
+            <div class="content"></div>
+        </div>
+        <div class="yellowCardClose" onmouseup="return false;" onclick='yellowCardAction("close", "yellowCard_1");'>
+            <a href="javascript:void(0);"></a>
+        </div>
+                        <div class="yellowCardMinimalize" onclick='yellowCardAction("minimalize", "yellowCard_1");' ></div>  
+                <div class="yellowCardMaximalize" onclick='yellowCardAction("maximalize", "yellowCard_1");' style="display:none;" ></div>  
+                     <div class="cardBody" >
+            <div class="content"></div>
+        </div>
+    </div>     
+    <script type="text/javascript">$('#yellowCard_1').offset({ top: screen.height/2-150, left: screen.width/2-150});</script>
+<script type="text/javascript" src="/wz_dragdrop.js"></script>
+ <!--
+ <div id="kontener">
+ <div id="baner"><img src="/images/baner_top1.jpg"></div>
+  -->
+    <div id="page" class="systema">
+        <div id="header">
+    <div id="main-navigation-container">
+        <div id="main-navigation">
+                        <div id="main-menu">
+                <ul class="main-menu-list">
+                    <li><a href="/wyloguj">Wyloguj</a></li>
+
+                    <li>
+                        <a href="javascript: void(null);">Ustawienia</a>
+                        <ul>
+                            <li><a href="/ustawienia">Konfiguracja</a></li>
+                            <li><a href="/informacja">Informacje</a></li>
+                                                            <li><a href="/help" target="_blank">Pomoc</a></li>
+                                                    </ul>
+                    </li>
+                                        <li><a href="javascript: void(null);">Książki</a>
+                        <ul>
+                            <li><a href="/podreczniki_szkolne/lista">Podręczniki</a></li>
+                            <li><a href="/lektury">Lektury</a></li>
+                        </ul>
+                    </li>
+                                                                <li><a href="javascript: void(null);">Wyniki</a><ul>
+                        <li><a href="/uczen_wyniki_egzaminow">Wyniki egzaminów</a></li><li><a href="/szczegolne_osiagniecia_ucznia">Szczególne osiągnięcia</a></li>                        </ul></li>
+                                        <li><a href="/ankiety_admin_ankiety">Ankiety</a></li>
+                        <li><a href="javascript: void(null);">Organizacja zajęć</a><ul>
+                                <li><a href="javascript:otworz_w_nowym_oknie('/przegladaj_plan_lekcji','plan_u',0,0)">Plan lekcji</a></li>
+                                                                    <li><a href="/zrealizowane_lekcje">Lekcje</a></li>
+                                                                        <li><a href="/pliki_szkoly">Pliki&nbsp;szkoły</a></li>
+                                                            </ul></li>
+                    <li><a href="/uwagi">Uwagi</a></li>                     
+                                         
+                    <li><a href="/spe_info" ><nobr>e-Nauczanie</nobr></a></li>                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="top-banner-container">
+        <a href="/uczen_index" >
+            <img id="top-banner" src="/assets/img/synergia/header/benners/default.png" />
+        </a>
+        <div id="graphic-menu">
+            <ul>
+                <li><a href="/indywidualni" id="icon-indywidualni"><span class="circle"></span>indywidualni</a></li>                                    <li><a  href="/przegladaj_oceny/uczen" id="icon-oceny"><span class="circle"></span>Oceny</a>
+                                            </li>
+                                        <li>
+                        <a  href="/przegladaj_nb/uczen" id="icon-nb">
+                            <span class="circle"></span>Frekwencja
+                        </a>
+                                            </li>
+                                    <li><a  href="/wiadomosci"  id="icon-wiadomosci"><span class="circle"></span>Wiadomości</a></li>
+                <li><a href="/uczen_index/twoje_uslugi" id="icon-uslugi"><span class="circle"></span>Usługi</a></li>
+                                    <li><a href="/smsinfo" id="icon-smsinfo"><span class="circle"></span>Sms info</a></li>
+                                    <li><a  href="/ogloszenia" id="icon-ogloszenia"><span class="circle"></span>Ogłoszenia</a></li>
+                                <li><a  href="/terminarz" id="icon-terminarz"><span class="circle"></span>Terminarz</a></li>
+                                    <li><a  href="/moje_zadania" id="icon-zadania"><span class="circle"></span>Zadania domowe</a>                    </li>
+                                </ul>
+        </div>
+    </div>
+    <div id="user-section">
+                    ostatnie logowanie: <span class="tooltip" title="Ostatnich 10 prawidłowych logowań:<br/>2017-09-30 07:30:22 z ip 89.66.174.57<br/>2017-09-30 07:20:22 z ip 89.66.174.57<br/>2017-09-30 07:10:23 z ip 89.66.174.57<br/>2017-09-30 07:00:26 z ip 89.66.174.57<br/>2017-09-30 06:50:23 z ip 89.66.174.57<br/>2017-09-30 06:40:23 z ip 89.66.174.57<br/>2017-09-30 06:30:23 z ip 89.66.174.57<br/>2017-09-30 06:20:23 z ip 89.66.174.57<br/>2017-09-30 06:10:23 z ip 89.66.174.57<br/>2017-09-30 06:00:23 z ip 89.66.174.57">2017-09-30 07:30:22</span> &nbsp; | &nbsp;  jesteś zalogowany jako: <b>
+            <script type="text/javascript" src="/js/ErrorProvider.js"></script><script type="text/javascript" src="/js/jquery/mTip-v1.0.3.js"></script><style type="text/css">@import url("/js/jquery/mTip.black.css")</style>Sebastian Celejewski&nbsp;(rodzic&nbsp;<img class="tooltip helper-icon" alt="Dane można zmienić w konfiguracji" title="Dane można zmienić w konfiguracji" src="/images/pomoc_ciemna.png" />&nbsp;)</b>            </div>
+</div>
+            
+<script type="text/javascript">
+    function zapiszPaddingStrony( padding ) {
+        $.ajax({
+            type: "POST",
+            url: '/ajax/setPagePadding.php',
+            data: 'enlarge='+padding,
+            success: function() {
+            },
+            error: function() {
+            }
+          });
+    }
+        $(document).ready(function() {
+        if( window.width <= 1024 ) {
+            zapiszPaddingStrony(1);
+            $("#body").css("padding-left","0");
+            $("#body").css("padding-right","0");
+        }
+    });
+        </script>
+<div id="left-widgets-container">
+    </div>
+<div id="body"  >
+        <div id="mobile-banner" class="mobile-banner pseudo_table container static">
+            <div class="pseudo_row">
+                <div class="pseudo_cell right no-space-right">
+                    <span class="font18">Przeglądaj Oceny w</span>
+                    <span class="bold font18">aplikacji mobilnej!</span>
+                </div>
+                <div class="pseudo_cell right no-space-right buttons_cell_2">
+                    <a target="_blank" href="https://synergia.librus.pl/aplikacjemobilne#pobierz">
+                        <img src="/assets/img/banery_mobilne/google_play_button.png" alt="Google Play" />
+                    </a>
+                                        <a target="_blank" class="margin-left" href="https://synergia.librus.pl/aplikacjemobilne#pobierz">
+                        <img src="/assets/img/banery_mobilne/app_store_button.png" alt="App Play" />
+                    </a>
+                </div>
+            </div>
+        </div>
+            <table class="decorated stretch" style="display: none;">
+        <tr class="line0">
+            <td><img id="przedmioty_00000_node" onclick=""></td>
+            <td></td>
+            <td class="line0">
+                <span id="Ocena0" class="grade-box">
+                    <a title="" class="ocena" href="/przegladaj_oceny/szczegoly/000000" aria-describedby="ui-tooltip-1" id="ocenaTest">1</a>
+                </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="line0" id="przedmioty_00000">
+            <td colspan="12">
+                <table class="stretch">
+                    <tbody>
+                        <tr class="line1 detail-grades">
+                            <td class="center">1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                
+                        setTimeout(function() {
+                if($('#ocenaTest').html() != "1") {
+                    show_message(
+                        'error medium', 
+                        'Uwaga!', 
+                        'System wykrył w przeglądarce Twojego komputera niewłaściwe <b>rozszerzenie, które błędnie wyświetla oceny Twojego Dziecka</b>.<br/>Informujemy, że <b>oceny które wprowadzili Nauczyciele do systemu w rzeczywistości nie zostały zmienione</b>.<br/><br/>Usuń rozszerzenie z ustawień przeglądarki, a następnie ponownie zaloguj się do rozwiązania LIBRUS Synergia.<br/><br/>Więcej informacji na temat rozszerzenia znajdziesz <a target="_blank" href="https://chrome.google.com/webstore/detail/librusowy-asystent-ucznia/ilnfpopncflimblljcnjekjlkcpnkpdg?hl=pl">tutaj</a>.', 
+                        [], 
+                        true
+                    );
+                }
+            }, 2000);
+
+        });
+    </script>
+                <script type="text/javascript" src="/js/Blinker.js"></script>
+            <script type="text/javascript">
+                /*
+                Variable: blinker
+                [object] blinker object.
+                 */
+                var blinker = new Blinker();
+                /*
+                Variable: blinkerOldOnLoad
+                [object] blinker onload object.
+                 */
+                var blinkerOldOnLoad = window.onload;
+                window.onload = function() {
+                    blinker.Start();
+                    if(blinkerOldOnLoad) {
+                        blinkerOldOnLoad();
+                    }
+                };
+            </script>
+            <FORM ACTION="/przegladaj_oceny/uczen" METHOD="POST" NAME="PrzegladajOceny">            <div class="container">
+                <h2 class="inside">Oceny ucznia
+                                </h2>
+                <span class="fold">    <a href="javascript:print();" class="fold-link"><span class="fold-start">Drukuj</span><span class="fold-end"></span></a></span><input type="hidden" disabled="disabled" name="zmiany_logowanie" id="zmiany_logowanie"  /><span class="fold">    <a href="javascript:
+                    $('input[name=zmiany_logowanie_wszystkie]').remove();
+                    $('input[name=zmiany_logowanie_tydzien]').remove();
+                    $('<input>').attr({ type: 'hidden',id: 'zmiany_logowanie',name: 'zmiany_logowanie', value : '1'}).appendTo('form');
+                    document.forms['PrzegladajOceny'].submit();" class="fold-link"><span class="fold-start">Pokaż dodane od ostatniego logowania</span><span class="fold-end"></span></a></span><input type="hidden" disabled="disabled" name="zmiany_logowanie_tydzien" id="zmiany_logowanie_tydzien"  /><span class="fold">    <a href="javascript:
+                    $('input[name=zmiany_logowanie]').remove();
+                    $('input[name=zmiany_logowanie_wszystkie]').remove();
+                    $('<input>').attr({ type: 'hidden',id: 'zmiany_logowanie_tydzien',name: 'zmiany_logowanie_tydzien', value : '1'}).appendTo('form');
+                    document.forms['PrzegladajOceny'].submit();" class="fold-link"><span class="fold-start">Pokaż dodane w aktualnym tygodniu</span><span class="fold-end"></span></a></span><span class="fold">    <a href="/archiwum" class="fold-link"><span class="fold-start">Archiwum</span><span class="fold-end"></span></a></span><div class="container-background">
+    <div class="container-icon">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="/images/naglowek_uczen.png" alt="Uczeń" class="screen-only" />
+                    </td>       <td><p><b>Uczeń:</b> Celejewski Filip<br /><b>Klasa: </b>4g PSP&nbsp;</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div><div ><center></center></div>    <script src="/js/cookie.js" type="text/javascript"></script>
+	<script src="/js/showHideRows.js" type="text/javascript"></script>
+	<script type="text/javascript">
+        /*
+           Variable: allUids
+           [array] table of subject identifiers
+          */
+		var allUids = Array('zachowanie', 90471, 90475, 90478, 90480, 90482, 90496, 90510, 90504, 90484, 90485, 90486, 90487, 90488, 90489, 90490, 90491, 90493, 90527, 90528, 90529, 90479);
+		var showHide = new ShowHideRows('przedmioty_', 'przedmioty_53501', allUids, null);
+
+		var old_on_load = window.onload;
+		window.onload = function()
+		{
+			showHide.Restore();
+
+			if(old_on_load) {
+				old_on_load();
+			}
+		};
+	</script>
+	<br /><h3 class="center">Oceny bieżące</h3><div class='right screen-only'><table><tr><td class="right"><table class="right sort_box"><tr><td>sortuj </td><td><select name="sortowanieOcen" class="right black" onChange='this.form.submit()'><option value="2" selected>wg daty</option><option value="1" >wg kategorii</option><option value="3" >wg ocen</option></select></td></tr></table></td></tr></table></div><table class="decorated stretch">
+   <thead>
+   <tr>
+   	<th  class="micro screen-only" rowspan="2" ><img src="/images/tree_colapsed.png" id="przedmioty_all_node" onclick="showHide.AllNodeHandler();" /></th>
+   	<td rowspan="2" >Przedmiot</td>
+         <td colspan="3" class="colspan center"><span>Okres 1</span></td>
+         <td colspan="3" class="colspan center"><span>Okres 2</span></td>
+         <td colspan="2"  class="colspan center"><span>Koniec roku</span></td></tr>
+       <tr>
+        <td class="no-border-top spacing">Oceny bieżące</td><td class="no-border-top no-border-left" title="Średnia ocen<br> z pierwszego okresu">Śr.I</td><td  class="no-border-top" title="Ocena śródroczna z pierwszego okresu">I</td>
+        <td  class="no-border-top">Oceny bieżące</td><td  class="no-border-top" title="Średnia ocen z drugiego okresu">Śr.II</td>  <td  class="no-border-top" title="Ocena śródroczna z drugiego okresu">II</td><td  class="no-border-top" title="Średnia roczna">Śr.R</td>  <td  class="no-border-top"  title="Ocena roczna">R</td></tr></thead><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90471_node" onclick="showHide.ShowHide(90471);" /></td>
+                            <td >Basen</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90471" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90475_node" onclick="showHide.ShowHide(90475);" /></td>
+                            <td >Etyka</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90475" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90478_node" onclick="showHide.ShowHide(90478);" /></td>
+                            <td >Gimnastyka korekcyjna<a href="javascript:void(0);" title="Przedmiot pozalekcyjny (inny)"><img src="/images/p_pozalekcyjny.gif" border="0" ></a></td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90478" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90480_node" onclick="showHide.ShowHide(90480);" /></td>
+                            <td >Historia</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90480" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90482_node" onclick="showHide.ShowHide(90482);" /></td>
+                            <td >Informatyka</td><td ><span id="Ocena1" class="grade-box" style="background-color:#FFD700; ">
+            <a title="Kategoria: Aktywność<br>Data: 2017-09-19 (wt.)<br>Nauczyciel: Kaczmarczyk Dorota<br>Licz do średniej: tak<br>Waga: 1<br>Dodał: Kaczmarczyk Dorota<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/904144" >6</a></span></td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90482" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1 bolded"><td colspan="9" class="center">Okres 1</td></tr><tr class="line1 detail-grades" style="background-color: #FFD700;"><td class="center">6</td><td class="center">&nbsp;</td><td>Aktywność</td><td class="center">2017-09-19</td><td >Kaczmarczyk Dorota</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Kaczmarczyk Dorota</td></tr><tr class="line1 bolded"><td colspan="9" class="center">Okres 2</td></tr><tr class="line1"><td class="center" colspan="9" class="center" >Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90496_node" onclick="showHide.ShowHide(90496);" /></td>
+                            <td >Język angielski</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90496" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90510_node" onclick="showHide.ShowHide(90510);" /></td>
+                            <td >Język hiszpański</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90510" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90504_node" onclick="showHide.ShowHide(90504);" /></td>
+                            <td >Język kaszubski</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90504" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90484_node" onclick="showHide.ShowHide(90484);" /></td>
+                            <td >Język polski</td><td ><span id="Ocena2" class="grade-box" style="background-color:#66CDAA; ">
+            <a title="Kategoria: Wypracowanie - Wakacyjna przygoda; Wakacyjna Pamiątka<br>Data: 2017-09-29 (pt.)<br>Nauczyciel: Labuda Milena<br>Licz do średniej: tak<br>Waga: 2<br>Dodał: Labuda Milena<br/>Obowiązek wyk. zadania: TAK<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/2692122" >4-</a></span><span id="Ocena3" class="grade-box" style="background-color:#FF1493; ">
+            <a title="Kategoria: Kartkówka - fonetyka<br>Data: 2017-09-29 (pt.)<br>Nauczyciel: Labuda Milena<br>Licz do średniej: tak<br>Waga: 3<br>Dodał: Labuda Milena<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/2774794" >5</a></span></td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90484" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1 bolded"><td colspan="9" class="center">Okres 1</td></tr><tr class="line1 detail-grades" style="background-color: #66CDAA;"><td class="center">4-</td><td class="center">&nbsp;</td><td>Wypracowanie - Wakacyjna przygoda; Wakacyjna Pamiątka</td><td class="center">2017-09-29</td><td >Labuda Milena</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >2</td><td class="center" >-</td><td >Labuda Milena</td></tr><tr class="line1 detail-grades" style="background-color: #FF1493;"><td class="center">5</td><td class="center">&nbsp;</td><td>Kartkówka - fonetyka</td><td class="center">2017-09-29</td><td >Labuda Milena</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >3</td><td class="center" >-</td><td >Labuda Milena</td></tr><tr class="line1 bolded"><td colspan="9" class="center">Okres 2</td></tr><tr class="line1"><td class="center" colspan="9" class="center" >Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90485_node" onclick="showHide.ShowHide(90485);" /></td>
+                            <td >Matematyka</td><td ><span id="Ocena4" class="grade-box" style="background-color:#FFD700; ">
+            <a title="Kategoria: Aktywność<br>Data: 2017-09-15 (pt.)<br>Nauczyciel: Kaczmarczyk Dorota<br>Dodał: Kaczmarczyk Dorota<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/625781" >+</a></span><span id="Ocena5" class="grade-box" style="background-color:#FFD700; ">
+            <a title="Kategoria: Aktywność<br>Data: 2017-09-15 (pt.)<br>Nauczyciel: Kaczmarczyk Dorota<br>Dodał: Kaczmarczyk Dorota<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/625782" >+</a></span><span id="Ocena6" class="grade-box" style="background-color:#FFD700; ">
+            <a title="Kategoria: Aktywność<br>Data: 2017-09-22 (pt.)<br>Nauczyciel: Kaczmarczyk Dorota<br>Dodał: Kaczmarczyk Dorota<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/1522100" >-</a></span></td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90485" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1 bolded"><td colspan="9" class="center">Okres 1</td></tr><tr class="line1 detail-grades" style="background-color: #FFD700;"><td class="center">+</td><td class="center">&nbsp;</td><td>Aktywność</td><td class="center">2017-09-15</td><td >Kaczmarczyk Dorota</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Kaczmarczyk Dorota</td></tr><tr class="line1 detail-grades" style="background-color: #FFD700;"><td class="center">+</td><td class="center">&nbsp;</td><td>Aktywność</td><td class="center">2017-09-15</td><td >Kaczmarczyk Dorota</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Kaczmarczyk Dorota</td></tr><tr class="line1 detail-grades" style="background-color: #FFD700;"><td class="center">-</td><td class="center">&nbsp;</td><td>Aktywność</td><td class="center">2017-09-22</td><td >Kaczmarczyk Dorota</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Kaczmarczyk Dorota</td></tr><tr class="line1 bolded"><td colspan="9" class="center">Okres 2</td></tr><tr class="line1"><td class="center" colspan="9" class="center" >Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90486_node" onclick="showHide.ShowHide(90486);" /></td>
+                            <td >Muzyka</td><td ><span id="Ocena7" class="grade-box" style="background-color:#F0E68C; ">
+            <a title="Kategoria: Śpiew<br>Data: 2017-09-21 (czw.)<br>Nauczyciel: Raczkowski Waldemar<br>Licz do średniej: tak<br>Waga: 1<br>Dodał: Raczkowski Waldemar<br/>Obowiązek wyk. zadania: TAK<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/1292587" >6</a></span></td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90486" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1 bolded"><td colspan="9" class="center">Okres 1</td></tr><tr class="line1 detail-grades" style="background-color: #F0E68C;"><td class="center">6</td><td class="center">&nbsp;</td><td>Śpiew</td><td class="center">2017-09-21</td><td >Raczkowski Waldemar</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Raczkowski Waldemar</td></tr><tr class="line1 bolded"><td colspan="9" class="center">Okres 2</td></tr><tr class="line1"><td class="center" colspan="9" class="center" >Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90487_node" onclick="showHide.ShowHide(90487);" /></td>
+                            <td >Plastyka</td><td ><span id="Ocena8" class="grade-box" style="background-color:#F0E68C; ">
+            <a title="Ocena: nieprzygotowany<br>Kategoria: zadanie<br>Data: 2017-09-27 (śr.)<br>Nauczyciel: Baryłkiewicz Marcin<br>Dodał: Baryłkiewicz Marcin<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/2244729" >np</a></span><span id="Ocena9" class="grade-box" style="background-color:#F0E68C; ">
+            <a title="Kategoria: zadanie<br>Data: 2017-09-27 (śr.)<br>Nauczyciel: Baryłkiewicz Marcin<br>Licz do średniej: tak<br>Waga: 1<br>Dodał: Baryłkiewicz Marcin<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/2369920" >5-</a></span><span id="Ocena10" class="grade-box" style="background-color:#F0E68C; ">
+            <a title="Kategoria: zadanie<br>Data: 2017-09-27 (śr.)<br>Nauczyciel: Baryłkiewicz Marcin<br>Licz do średniej: tak<br>Waga: 1<br>Dodał: Baryłkiewicz Marcin<br/><br>Komentarz: ulubiony zwierzak" class="ocena" href="/przegladaj_oceny/szczegoly/2370387" >6</a></span></td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90487" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1 bolded"><td colspan="9" class="center">Okres 1</td></tr><tr class="line1 detail-grades" style="background-color: #F0E68C;"><td class="center">np</td><td class="center">&nbsp;</td><td>zadanie</td><td class="center">2017-09-27</td><td >Baryłkiewicz Marcin</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Baryłkiewicz Marcin</td></tr><tr class="line1 detail-grades" style="background-color: #F0E68C;"><td class="center">5-</td><td class="center">&nbsp;</td><td>zadanie</td><td class="center">2017-09-27</td><td >Baryłkiewicz Marcin</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Baryłkiewicz Marcin</td></tr><tr class="line1 detail-grades" style="background-color: #F0E68C;"><td class="center">6</td><td class="center"><strong><a href="javascript:void(0);"   onClick="otworz_w_nowym_oknie('/komentarz_oceny/1/2370387','ko',480,450)" >K</a></strong></td><td>zadanie</td><td class="center">2017-09-27</td><td >Baryłkiewicz Marcin</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Baryłkiewicz Marcin</td></tr><tr class="line1 bolded"><td colspan="9" class="center">Okres 2</td></tr><tr class="line1"><td class="center" colspan="9" class="center" >Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90488_node" onclick="showHide.ShowHide(90488);" /></td>
+                            <td >Przyroda</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90488" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90489_node" onclick="showHide.ShowHide(90489);" /></td>
+                            <td >Religia</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90489" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90490_node" onclick="showHide.ShowHide(90490);" /></td>
+                            <td >Świetlica<a href="javascript:void(0);" title="Przedmiot pozalekcyjny (inny)"><img src="/images/p_pozalekcyjny.gif" border="0" ></a></td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90490" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90491_node" onclick="showHide.ShowHide(90491);" /></td>
+                            <td >Technika</td><td ><span id="Ocena11" class="grade-box" style="background-color:#F0E68C; ">
+            <a title="Ocena: nieprzygotowany<br>Kategoria: zadanie<br>Data: 2017-09-28 (czw.)<br>Nauczyciel: Bildziuk Marcin<br>Dodał: Bildziuk Marcin<br/>" class="ocena" href="/przegladaj_oceny/szczegoly/2498570" >np</a></span></td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90491" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1 bolded"><td colspan="9" class="center">Okres 1</td></tr><tr class="line1 detail-grades" style="background-color: #F0E68C;"><td class="center">np</td><td class="center">&nbsp;</td><td>zadanie</td><td class="center">2017-09-28</td><td >Bildziuk Marcin</td><td class="center"><img src="/images/aktywne.png" border="0" /></td><td class="right" >1</td><td class="center" >-</td><td >Bildziuk Marcin</td></tr><tr class="line1 bolded"><td colspan="9" class="center">Okres 2</td></tr><tr class="line1"><td class="center" colspan="9" class="center" >Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90493_node" onclick="showHide.ShowHide(90493);" /></td>
+                            <td >Wychowanie fizyczne</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90493" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90527_node" onclick="showHide.ShowHide(90527);" /></td>
+                            <td >Zajęcia dydaktyczno-wyrównawcze<a href="javascript:void(0);" title="Przedmiot pozalekcyjny (inny)"><img src="/images/p_pozalekcyjny.gif" border="0" ></a></td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90527" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90528_node" onclick="showHide.ShowHide(90528);" /></td>
+                            <td >Zajęcia korekcyjno-kompensacyjne<a href="javascript:void(0);" title="Przedmiot pozalekcyjny (inny)"><img src="/images/p_pozalekcyjny.gif" border="0" ></a></td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90528" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line1">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90529_node" onclick="showHide.ShowHide(90529);" /></td>
+                            <td >Zajęcia pozalekcyjne<a href="javascript:void(0);" title="Przedmiot pozalekcyjny (inny)"><img src="/images/p_pozalekcyjny.gif" border="0" ></a></td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line1" name="przedmioty_all" id="przedmioty_90529" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr><tr class="line0">
+                            <td class='center micro screen-only'><img src="/images/tree_colapsed.png" id="przedmioty_90479_node" onclick="showHide.ShowHide(90479);" /></td>
+                            <td >Zajęcia z wychowawcą</td><td >Brak ocen</td><td >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został wyłączony przez administratora szkoły." title="Podgląd średniej ocen został wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center" > - </td><td >Brak ocen</td><td class="center" >&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td><td  class="center">&nbsp;<img class="tooltip helper-icon" alt="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." title="Podgląd średniej ocen został<br/>wyłączony przez administratora szkoły." src="/images/pomoc_ciemna.png" />&nbsp;</td><td class="center"  > - </td></tr><tr class="line0" name="przedmioty_all" id="przedmioty_90479" style="display: none; visibility: hidden;">
+                              <td colspan="12" ><table class="stretch"><thead><tr class=""><td >Ocena</td><td title="Komentarz do oceny">K</td><td>Kategoria</td><td class="center">Data</td><td>Nauczyciel</td><td>Licz do śr.</td><td>Waga</td><td >Poprawa oceny</td><td>Dodał</td></tr></thead><tbody><tr class="line1"><td colspan="9" class="WierszTab2">Brak ocen</td></tr></tbody><tfoot><tr><td  class="center" colspan="12"></td></tr></tfoot></table></td></tr>        <tr class="bolded line1">
+            <td class="center micro screen-only">
+                <img src="/images/tree_colapsed.png" id="przedmioty_zachowanie_node"
+                                                     onclick="showHide.ShowHide('zachowanie');" />
+            </td>
+	        <td>
+                Zachowanie
+            </td>
+            <td colspan="2">
+                            &nbsp;
+            </td>
+            <td class="center">            
+                -            </td>
+            <td colspan="2">
+                            &nbsp;
+            </td>
+            <td class="center" colspan="3">
+                -            </td>
+        </tr>
+                <tr class="line0" name="przedmioty_all" id="przedmioty_zachowanie" 
+                                                               style="display: none; visibility: hidden;">
+            <td>&nbsp;</td>
+            <td colspan="12" >
+                <table class="stretch">
+                    <thead>
+                        <tr>
+                            <td>Kategoria</td>
+                            <td>Komentarz</td>
+                            <td>Oceny</td>
+                            <td>Data wystawienia</td>
+                            <td>Dodał</td>
+                                        
+                        </tr>
+                    </thead>
+                    <tr class="line0 bolded"><td colspan="5" class="center">Okres 1</td></tr><tr class="line1"><td colspan="5" class="center">Brak ocen</td></tr>                    <tr class="line0">
+                        <td  colspan="2" class="right">
+                            Punkty startowe                        </td>
+                        <td class="right">
+                            0                        </td>
+                        <td class="right" colspan="2">&nbsp;</td>
+                    </tr>
+                                        <tr class="line1" >
+                        <td colspan="2" class="right">
+                            <strong>
+                                Suma                            </strong>
+                        </td>
+                        <td class="right">
+                            <strong>
+                                0                            </strong>
+                        </td>
+                        <td colspan="2">
+                            &nbsp;                        </td>
+                    <tr class="line0"><td colspan="2">&nbsp;</td>
+                        <td>&nbsp;</td><td class="" colspan="3">Ocena śródroczna przewidywana wystawiona przez nauczyciela: </td><tr class="line1"><td colspan="2" class="right">Ocena opisowa śródroczna</td>
+                    <td>&nbsp;</td><td class="" colspan="3"></td>
+                </tr><tr class="line0 bolded"><td colspan="5"  class="center">Okres 2</td></tr><tr class="line1"><td colspan="5" class="center">Brak ocen</td></tr><tr class="line0"><td colspan="2" class="right">Punkty startowe</td>
+                    <td class="right">0</td>
+                    <td class="WierszTab2" colspan="2">&nbsp;</td>
+                    </tr><tr class="line1"><td  colspan="2" class="right"><strong>Suma</strong></td>
+                        <td class="right"><strong>0</strong></td><td colspan="2">&nbsp;</td>
+                    </tr><tr class="line1">
+                <td colspan="2">&nbsp;</td><td>&nbsp;</td>
+                <td class="" colspan="3">Ocena roczna przewidywana wystawiona przez nauczyciela: </td></tr><tr class="line1"><td colspan="2" class="right">Ocena opisowa roczna</td>
+                    <td>&nbsp;</td><td class="" colspan="3"></td>
+                </tr></tbody><tfoot><tr ><td colspan="8"></td></tr></tfoot></table></td></tr></tbody><tfoot><tr><td colspan="10">&nbsp;</td></tr></tfoot></table><script type="text/javascript"> showHide.Show("zachowanie")</script><div class="legend left stretch">
+            <h3>Legenda:</h3><ul><li  class="double big" ><p><span>bz</span> - brak zadania</p></li><li  class="double big" ><p><span>np</span> - nieprzygotowany</p></li><li  class="double big" ><p><span>nk</span> - nieklasyfikowany</p></li><li  class="double big" ><p><span>uc</span> - uczęszczał</p></li><li  class="double big" ><p><span>nu</span> - nie uczęszczał</p></li><li  class="double big" ><p><span>zl</span> - zaliczył</p></li><li  class="double big" ><p><span>nz</span> - nie zaliczył</p></li><li  class="double big" ><p><span>zw</span> - zwolniony</p></li><li  class="double big" ><p><b>Śr.I</b> - Średnia ocen bieżących z pierwszego okresu </p></li><li  class="double big" ><p><b>I</b> - Ocena śródroczna z pierwszego okresu</p></li><li   class="double big" ><p><b>Śr.II</b> - Średnia ocen bieżących z drugiego okresu</p></li><li  class="double big" ><p><b>II</b> - Ocena śródroczna z drugiego okresu</p></li><li  class="double big" ><p><b>Śr.R</b> - Średnia ocen bieżących z całego roku szkolnego</p></li><li  class="double big" ><p><b>R</b> - Ocena roczna</p></li><li  class="double big" ><p><b>*</b> - Ocena poprawiona w innym semestrze</p></li></ul></div><p>&nbsp;</p></div></div></form><form id="go_back_form" method="POST" action="https://synergia.librus.pl/uczen_index"><input type="hidden" name="Kid" value="" /><input type="hidden" name="UZid" value="" /><input type="hidden" name="Pid" value="" /><input type="hidden" name="oldKid" value="" /></form>        </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        if( $('#body.have-interface').find(".container.static").length > 0 ) {
+            $('#body').css("padding-left", $('#body').css("padding-right") );
+        }
+        $('#body.have-interface').removeClass("have-interface");
+      });
+  </script>
+    <script type="text/javascript" src="/js/cookieBox.js"></script>
+    <div id="cookieBox" class="cookieBox" style="display: none;">
+        <div id="cookieBoxClose" class="cookieBoxClose"><a href="javascript: void(null);">x</a></div>
+        <p>
+            Ta strona wykorzystuje pliki cookies. Korzystając z niej
+            <a href="https://synergia.librus.pl/polityka-prywatnosci/" target="_blank">wyrażasz zgodę na ich używanie</a>, zgodnie z&nbsp;aktualnymi ustawieniami przeglądarki.
+        </p>
+    </div>
+  <div id="footer">
+              <hr></hr>
+                <a id="smallFBbutton" target="_blank" href="https://www.facebook.com/pages/SKF-System-Kontroli-Frekwencji-i-Postępów-w-Nauce/149524881769330" >&nbsp;</a>
+        <a id="smallGPbutton" target="_blank" href="https://plus.google.com/u/0/110708973083872007554/" >&nbsp;</a>
+                <span id="bottom-logo"></span>
+                </div>
+  </div>
+        </body>
+    </html>
+  
