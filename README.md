@@ -16,3 +16,9 @@ Logs into Librus, fetches list of students' grades and messages, and sends e-mai
 ## Task List
 
 https://trello.com/b/HRfqPgck/librus-email-notifications
+
+## Screenshots
+
+Sample email with information about new grades
+
+![Screenshot](https://raw.githubusercontent.com/SebastianCelejewski/librus-email-notifications/master/doc/len-screenshot.JPG)
