@@ -12,7 +12,7 @@ module LibrusEmailNotifications
         def process librus_user
             @logger.log "Starting messages processing"
 
-            data_file = "#{@data_dir}/#{librus_user}-data.txt"
+            data_file = "#{@data_dir}/#{librus_user}.messages"
 
             if !File.exists?(data_file)
                 File.open(data_file,"w"){}

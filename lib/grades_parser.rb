@@ -13,12 +13,6 @@ module LibrusEmailNotifications
         def process(librus_user)
             @logger.log "Starting grades processing"
 
-            data_file = "#{@data_dir}/#{librus_user}.grades"
-
-            if !File.exists?(data_file)
-                File.open(data_file,"w"){}
-            end
-
             Capybara.page.find(:xpath, "//a[@id='icon-oceny']").trigger("click")
 
             if @throttle
