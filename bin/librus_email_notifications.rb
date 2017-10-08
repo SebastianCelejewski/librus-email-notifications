@@ -32,6 +32,7 @@ module LibrusEmailNotifications
     grades_parser = GradesParser.new data_dir, smtp_sender, logger, true
     announcements_parser = AnnouncementsParser.new data_dir, smtp_sender, logger, true
     calendar_parser = CalendarParser.new data_dir, smtp_sender, logger, true
+    homework_parser = HomeworkParser.new data_dir, smtp_sender, logger, true
 
     if File.exists?("lockfile")
         if Time.now - File.ctime("lockfile") > 15*60
@@ -70,6 +71,7 @@ module LibrusEmailNotifications
     grades_parser.process librus_user
     announcements_parser.process librus_user
     calendar_parser.process librus_user
+    homework_parser.process librus_user
 
     logger.log "Librus Email Notifications processing complete for account #{librus_user}"
 
