@@ -54,7 +54,7 @@ module LibrusEmailNotifications
         end
 
         def load_current_announcements(announcements_html_page)
-            rows = announcements_html_page.xpath("//table[@class='decorated form big center printable']")
+            rows = announcements_html_page.xpath("//table[@class='decorated big center printable margin-top']")
             announcements = Array.new
             rows.each do |row|
                 sender = row.at_xpath("tbody/tr[1]/td").text()
