@@ -67,7 +67,7 @@ module LibrusEmailNotifications
 
                 sender_name = sender.split(/\(/)[0]
                 sender_display_name = "#{sender_name} (#{librus_user})"
-                topic_display_name = "Wiadomość: #{topic}"
+                topic_display_name = "Wiadomość: #{topic} (#{date})"
 
                 smtp_start_time = DateTime.now
 
