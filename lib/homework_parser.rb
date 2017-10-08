@@ -26,6 +26,8 @@ module LibrusEmailNotifications
             previous_homework = load_previous_homework librus_user
             new_homework = find_new_homework(previous_homework, current_homework)
 
+            new_homework = load_details_of_new_homework(new_homework)
+
             @logger.log "Number of previous homework: #{previous_homework.length}"
             @logger.log "Number of current homework: #{current_homework.length}"
             @logger.log "Number of new homework: #{new_homework.length}"
@@ -40,6 +42,7 @@ module LibrusEmailNotifications
                     text += "Data zadania: #{homework.start_date}<br/>"
                     text += "Termin wykonania: #{homework.end_date}<br/>"
                     text += "<br/>"
+                    text += "#{homework.details}"
 
                     smtp_start_time = DateTime.now
 
@@ -68,6 +71,8 @@ module LibrusEmailNotifications
             rows = homework_html_page.xpath("//tr[@class='line1']")
             homework = Array.new
             rows.each do |row|
+                button_onclick = row.at_xpath("td[10]/input/@onclick").text().strip()
+                id = /.*\/(\d+)\'.*/.match(button_onclick)[1]
                 subject = row.at_xpath("td[1]").text().strip()
                 teacher = row.at_xpath("td[2]").text().strip()
                 topic = row.at_xpath("td[3]").text().strip()
@@ -75,9 +80,37 @@ module LibrusEmailNotifications
                 start_date = row.at_xpath("td[5]").text().strip()
                 end_date = row.at_xpath("td[7]").text().strip()
                 status = row.at_xpath("td[9]").text().strip()
-                homework << Homework.new(subject, teacher, topic, category, start_date, end_date, status)
+                homework << Homework.new(id, subject, teacher, topic, category, start_date, end_date, status)
             end            
             return homework
+        end
+
+        def load_details_of_new_homework(new_homework)
+            new_homework.each do |homework|
+                @logger.log "Loading details for homework #{homework.id}"
+                homework_details_page_url = "/moje_zadania/podglad/#{homework.id}"
+
+                homework_details_window = Capybara.window_opened_by {
+                    script = "otworz_w_nowym_oknie('/moje_zadania/podglad/#{homework.id}','o1',650,600)"
+                    Capybara.page.execute_script(script)
+
+                }
+
+                Capybara.within_window homework_details_window do
+                    homework_details_window_html = Nokogiri::HTML(Capybara.page.html)
+                    homework.details = load_homework_details(homework_details_window_html)
+                end
+
+            end
+
+            return new_homework
+        end
+
+        def load_homework_details(homework_details_html_page)
+            details_table = homework_details_html_page.at_xpath("//table[@class='decorated']")
+            details_row = details_table.at_xpath("tbody/tr[6]")
+            details_cell = details_row.at_xpath("td[2]")
+            return details_cell.text().strip()
         end
 
         def load_previous_homework(librus_user)

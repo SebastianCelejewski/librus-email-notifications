@@ -11,6 +11,10 @@ module LibrusEmailNotifications
 			assert_equal 1, @homework.length
 		end
 
+		def test_Should_extract_id
+			assert_equal "60208", @homework[0].id
+		end
+
 		def test_Should_extract_subject
 			assert_equal "Język polski", @homework[0].subject
 		end
