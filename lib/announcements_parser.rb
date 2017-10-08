@@ -14,6 +14,12 @@ module LibrusEmailNotifications
             @logger.log "Starting announcements processing"
 
             Capybara.page.find(:xpath, "//a[@id='icon-ogloszenia']").trigger("click")
+            
+            if @throttle
+                @logger.log "Waiting 2 seconds"
+                sleep 2
+            end
+
             announcements_html_page = Nokogiri::HTML(Capybara.page.html)
 
             current_announcements = load_current_announcements announcements_html_page
@@ -27,7 +33,7 @@ module LibrusEmailNotifications
             if new_announcements.length > 0
                 new_announcements.each do |announcement|
                     sender_display_name = "#{announcement.sender} (#{librus_user})"
-                    topic = "Ogłoszenie: #{announcement.subject}"
+                    topic = "Ogłoszenie: #{announcement.subject} (#{announcement.date})"
                     text = announcement.text
 
                     smtp_start_time = DateTime.now
