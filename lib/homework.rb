@@ -10,7 +10,7 @@ module LibrusEmailNotifications
 		attr_reader :status
 		attr_accessor :details
 
-		def initialize(id, subject, teacher, topic, category, start_date, end_date, status)
+		def initialize(id, subject, teacher, topic, category, start_date, end_date, status, details = nil)
 			@id = id
 			@subject = subject
 			@teacher = teacher
@@ -19,6 +19,7 @@ module LibrusEmailNotifications
 			@start_date = start_date
 			@end_date = end_date
 			@status = status
+			@details = details
 		end
 
      	def to_json x
