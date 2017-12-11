@@ -26,13 +26,14 @@ module LibrusEmailNotifications
     recipients = ARGV[6]
 
     logger.log "Librus Email Notifications initialization for account #{librus_user}"
+    throttle = true
 
     smtp_sender = SmtpSender.new(smtp_host, smtp_email, smtp_user, smtp_password, recipients)
-    messages_parser = MessagesParser.new data_dir, smtp_sender, logger, true
-    grades_parser = GradesParser.new data_dir, smtp_sender, logger, true
-    announcements_parser = AnnouncementsParser.new data_dir, smtp_sender, logger, true
-    calendar_parser = CalendarParser.new data_dir, smtp_sender, logger, true
-    homework_parser = HomeworkParser.new data_dir, smtp_sender, logger, true
+    messages_parser = MessagesParser.new data_dir, smtp_sender, logger, throttle
+    grades_parser = GradesParser.new data_dir, smtp_sender, logger, throttle
+    announcements_parser = AnnouncementsParser.new data_dir, smtp_sender, logger, throttle
+    calendar_parser = CalendarParser.new data_dir, smtp_sender, logger, throttle
+    homework_parser = HomeworkParser.new data_dir, smtp_sender, logger, throttle
 
     if File.exists?("lockfile")
         if Time.now - File.ctime("lockfile") > 15*60
@@ -66,6 +67,11 @@ module LibrusEmailNotifications
     Capybara.page.fill_in('login-input', :with => librus_user)
     Capybara.page.fill_in('passwd', :with => librus_password)
     Capybara.page.find(:xpath, "//button[@name='loguj_synergia']").click
+
+    if throttle
+        logger.log "Waiting 5 seconds"
+        sleep 5
+    end
 
     messages_parser.process librus_user
     grades_parser.process librus_user
