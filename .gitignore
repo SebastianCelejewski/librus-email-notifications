@@ -4,3 +4,5 @@ len*.cmd
 lockfile
 *.log
 len_celejewscy
+/self_test_log
+/self_test_data
