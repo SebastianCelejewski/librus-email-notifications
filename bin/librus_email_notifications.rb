@@ -66,7 +66,7 @@ module LibrusEmailNotifications
 
     Capybara.page.fill_in('login-input', :with => librus_user)
     Capybara.page.fill_in('passwd', :with => librus_password)
-    Capybara.page.find(:xpath, "//button[@name='loguj_synergia']").click
+    Capybara.page.find(:xpath, "//button[@name='loguj_synergia']").trigger('click')
 
     if throttle
         logger.log "Waiting 5 seconds"
