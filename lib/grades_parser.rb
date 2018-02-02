@@ -38,6 +38,7 @@ module LibrusEmailNotifications
 
                 text = ""
                 new_grades.each do |grade|
+                    text += "<b>Konto</b>: #{librus_user}<br/>"
                     text += "<b>Przedmiot</b>: #{grade.subject}<br/>"
                     text += "<b>Ocena</b>: #{grade.value}<br/>"
                     text += "<b>Kategoria</b>: #{grade.category}<br/>"
